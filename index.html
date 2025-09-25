@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ภาษาอังกฤษ: ตัวอักษรและกลยุทธ์เตรียมสอบ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #e74c3c;
+            --secondary: #3498db;
+            --accent: #2ecc71;
+            --light: #f9f9f9;
+            --dark: #2c3e50;
+            --gray: #95a5a6;
+            --red-light: #ffebee;
+            --blue-light: #e3f2fd;
+            --shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Sarabun', 'Kanit', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, var(--red-light) 0%, var(--blue-light) 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 2.5rem 0;
+            text-align: center;
+            border-radius: 0 0 30px 30px;
+            margin-bottom: 2.5rem;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" opacity="0.1"><text x="50%" y="50%" font-family="Arial" font-size="14" text-anchor="middle" dominant-baseline="middle">A B C D E F G</text></svg>');
+            opacity: 0.1;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .nav-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2.5rem;
+            flex-wrap: wrap;
+            background: white;
+            border-radius: 50px;
+            padding: 8px;
+            box-shadow: var(--shadow);
+        }
+        
+        .tab {
+            padding: 14px 28px;
+            cursor: pointer;
+            border-radius: 50px;
+            transition: all 0.4s ease;
+            font-weight: bold;
+            margin: 0 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+            min-width: 150px;
+            text-align: center;
+        }
+        
+        .tab:hover {
+            background: rgba(231, 76, 60, 0.1);
+        }
+        
+        .tab.active {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            box-shadow: 0 4px 10px rgba(231, 76, 60, 0.3);
+        }
+        
+        .tab i {
+            margin-right: 8px;
+        }
+        
+        .tab-content {
+            display: none;
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            margin-bottom: 2.5rem;
+            border: 1px solid rgba(231, 76, 60, 0.1);
+        }
+        
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.6s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        h2 {
+            color: var(--primary);
+            margin-bottom: 1.8rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 3px solid var(--primary);
+            font-size: 2.2rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        h2 i {
+            margin-right: 10px;
+            color: var(--secondary);
+        }
+        
+        h3 {
+            color: var(--dark);
+            margin: 1.8rem 0 1.2rem 0;
+            font-size: 1.6rem;
+            position: relative;
+            padding-left: 15px;
+        }
+        
+        h3::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 5px;
+            background: var(--secondary);
+            border-radius: 3px;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #ffeaea 0%, #e3f2fd 100%);
+            border-left: 5px solid var(--primary);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 12px 12px 0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        
+        .alphabet-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            box-shadow: var(--shadow);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .alphabet-table th {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .alphabet-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .alphabet-table tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+        
+        .alphabet-table tr:hover {
+            background: #f0f7ff;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            box-shadow: var(--shadow);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .comparison-table th, .comparison-table td {
+            padding: 15px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        
+        .comparison-table th {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            font-weight: 600;
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+        
+        .strategy-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 1.5rem 0;
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--secondary);
+            transition: transform 0.3s ease;
+        }
+        
+        .strategy-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .strategy-card h4 {
+            color: var(--secondary);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .strategy-card h4::before {
+            content: "•";
+            margin-right: 10px;
+            color: var(--primary);
+            font-size: 2rem;
+        }
+        
+        .tip-box {
+            background: linear-gradient(135deg, #fff3e0 0%, #e8f5e9 100%);
+            border-left: 5px solid #ff9800;
+            padding: 1.8rem;
+            margin: 2rem 0;
+            border-radius: 0 12px 12px 0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        
+        .mnemonic {
+            background: #f0f7ff;
+            border-radius: 12px;
+            padding: 1.8rem;
+            margin: 1.8rem 0;
+            border: 2px dashed var(--secondary);
+            position: relative;
+        }
+        
+        .mnemonic::before {
+            content: "เทคนิคช่วยจำ";
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            background: var(--secondary);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+        
+        .alphabet-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 15px;
+            margin: 2rem 0;
+        }
+        
+        .alphabet-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px 10px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--primary);
+            cursor: pointer;
+        }
+        
+        .alphabet-card.vowel {
+            border-top: 4px solid var(--secondary);
+        }
+        
+        .alphabet-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+        
+        .alphabet-card .letter {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+        
+        .alphabet-card.vowel .letter {
+            color: var(--secondary);
+        }
+        
+        .alphabet-card .name {
+            font-size: 0.9rem;
+            color: var(--dark);
+        }
+        
+        .alphabet-card .sound {
+            font-size: 0.8rem;
+            color: var(--gray);
+            margin-top: 5px;
+        }
+        
+        .progress-container {
+            background: #f0f0f0;
+            border-radius: 10px;
+            height: 12px;
+            margin: 1.5rem 0;
+            overflow: hidden;
+        }
+        
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 10px;
+            width: 0;
+            transition: width 1s ease-in-out;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2.5rem 0;
+            margin-top: 3rem;
+            color: var(--dark);
+            border-top: 1px solid rgba(0,0,0,0.1);
+            background: rgba(255,255,255,0.7);
+            border-radius: 20px 20px 0 0;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+        
+        .stat-card {
+            background: white;
+            border-radius: 15px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+            margin: 10px;
+            flex: 1;
+            min-width: 200px;
+            border-top: 4px solid var(--primary);
+            transition: transform 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .stat-card h4 {
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .stat-card .number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--secondary);
+        }
+        
+        .quick-nav {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: white;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: var(--shadow);
+            z-index: 100;
+            display: none;
+        }
+        
+        .quick-nav a {
+            display: block;
+            padding: 8px;
+            text-align: center;
+            color: var(--dark);
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 5px 0;
+            transition: all 0.3s ease;
+        }
+        
+        .quick-nav a:hover {
+            background: var(--secondary);
+            color: white;
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--primary);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: var(--shadow);
+            z-index: 100;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .back-to-top.show {
+            opacity: 1;
+        }
+        
+        .search-box {
+            margin: 1.5rem 0;
+            position: relative;
+        }
+        
+        .search-box input {
+            width: 100%;
+            padding: 12px 20px;
+            border-radius: 50px;
+            border: 1px solid #ddd;
+            font-size: 1rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .search-box i {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gray);
+        }
+        
+        .quiz-section {
+            background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+        }
+        
+        .quiz-question {
+            margin-bottom: 1.5rem;
+        }
+        
+        .quiz-options {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        
+        .quiz-option {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .quiz-option:hover {
+            border-color: var(--secondary);
+        }
+        
+        .quiz-option.correct {
+            border-color: var(--accent);
+            background: #e8f5e9;
+        }
+        
+        .quiz-option.incorrect {
+            border-color: var(--primary);
+            background: #ffebee;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-tabs {
+                flex-direction: column;
+                border-radius: 15px;
+            }
+            
+            .tab {
+                margin: 5px 0;
+                min-width: auto;
+            }
+            
+            .alphabet-table, .comparison-table {
+                display: block;
+                overflow-x: auto;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            .tab-content {
+                padding: 1.5rem;
+            }
+            
+            .alphabet-grid {
+                grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+            }
+            
+            .quiz-options {
+                grid-template-columns: 1fr;
+            }
+            
+            .quick-nav {
+                display: none !important;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&family=Sarabun:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-language"></i> ภาษาอังกฤษ: ตัวอักษรและกลยุทธ์เตรียมสอบ</h1>
+            <p class="subtitle">คู่มือครบถ้วนสำหรับผู้เรียนภาษาอังกฤษทุกระดับ พร้อมเทคนิคการจำและกลยุทธ์การสอบที่ได้ผล</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="search-box">
+            <input type="text" placeholder="ค้นหาคำศัพท์หรือเนื้อหาที่ต้องการ...">
+            <i class="fas fa-search"></i>
+        </div>
+        
+        <div class="nav-tabs">
+            <div class="tab active" data-tab="overview"><i class="fas fa-home"></i> ภาพรวม</div>
+            <div class="tab" data-tab="alphabet"><i class="fas fa-font"></i> ตัวอักษรภาษาอังกฤษ</div>
+            <div class="tab" data-tab="exam-strategy"><i class="fas fa-graduation-cap"></i> กลยุทธ์เตรียมสอบ</div>
+            <div class="tab" data-tab="curriculum"><i class="fas fa-book"></i> หลักสูตรม.ปลาย</div>
+            <div class="tab" data-tab="resources"><i class="fas fa-link"></i> แหล่งเรียนรู้</div>
+        </div>
+        
+        <!-- หน้าแรก: ภาพรวม -->
+        <div class="tab-content active" id="overview">
+            <h2><i class="fas fa-info-circle"></i> ภาพรวมสาระสำคัญ</h2>
+            
+            <div class="highlight-box">
+                <p>เว็บไซต์นี้รวบรวมข้อมูลสำคัญเกี่ยวกับตัวอักษรภาษาอังกฤษและกลยุทธ์การเตรียมตัวสอบภาษาอังกฤษระดับมัธยมปลายอย่างครบถ้วน โดยออกแบบมาเพื่อให้เข้าใจง่ายและนำไปใช้ได้จริง</p>
+            </div>
+            
+            <div class="stats">
+                <div class="stat-card">
+                    <h4>ตัวอักษรภาษาอังกฤษ</h4>
+                    <div class="number">26</div>
+                    <p>ตัวอักษรทั้งหมด</p>
+                </div>
+                <div class="stat-card">
+                    <h4>สระ</h4>
+                    <div class="number">5</div>
+                    <p>A, E, I, O, U</p>
+                </div>
+                <div class="stat-card">
+                    <h4>พยัญชนะ</h4>
+                    <div class="number">21</div>
+                    <p>ตัวอักษรที่เหลือ</p>
+                </div>
+                <div class="stat-card">
+                    <h4>หน่วยเสียง</h4>
+                    <div class="number">44</div>
+                    <p>เสียงในภาษาอังกฤษ</p>
+                </div>
+            </div>
+            
+            <div style="display: flex; flex-wrap: wrap; gap: 25px; margin: 2.5rem 0;">
+                <div style="flex: 1; min-width: 300px; background: white; padding: 2rem; border-radius: 15px; box-shadow: var(--shadow); border-top: 4px solid var(--primary);">
+                    <h3 style="color: var(--primary);"><i class="fas fa-font"></i> ตัวอักษรภาษาอังกฤษ</h3>
+                    <ul style="margin-left: 1.5rem; margin-top: 1.5rem;">
+                        <li>ทั้งหมด 26 ตัว (น้อยกว่าภาษาไทย)</li>
+                        <li>แบ่งเป็น สระ 5 ตัว และพยัญชนะ 21 ตัว</li>
+                        <li>แยกความแตกต่างระหว่าง "ชื่อ" และ "เสียง" ของตัวอักษร</li>
+                        <li>เทคนิคการเทียบเสียงไทย-อังกฤษสำหรับการสะกดชื่อ</li>
+                        <li>อักษรกึ่งสระ W และ Y</li>
+                    </ul>
+                </div>
+                
+                <div style="flex: 1; min-width: 300px; background: white; padding: 2rem; border-radius: 15px; box-shadow: var(--shadow); border-top: 4px solid var(--secondary);">
+                    <h3 style="color: var(--secondary);"><i class="fas fa-graduation-cap"></i> กลยุทธ์เตรียมสอบ</h3>
+                    <ul style="margin-left: 1.5rem; margin-top: 1.5rem;">
+                        <li>วิเคราะห์ข้อสอบ GAT และ 9 วิชาสามัญ</li>
+                        <li>เทคนิคการจำคำศัพท์แบบ Memologic และ Memolody</li>
+                        <li>กฎไวยากรณ์สำคัญที่ออกสอบบ่อย</li>
+                        <li>เทคนิคการอ่านจับใจความอย่างมีประสิทธิภาพ</li>
+                        <li>โครงสร้างหลักสูตรภาษาอังกฤษระดับม.ปลาย</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="quiz-section">
+                <h3><i class="fas fa-question-circle"></i> แบบทดสอบความรู้เบื้องต้น</h3>
+                <div class="quiz-question">
+                    <p><strong>1. ตัวอักษรภาษาอังกฤษมีทั้งหมดกี่ตัว?</strong></p>
+                    <div class="quiz-options">
+                        <div class="quiz-option" data-correct="true">26 ตัว</div>
+                        <div class="quiz-option" data-correct="false">24 ตัว</div>
+                        <div class="quiz-option" data-correct="false">28 ตัว</div>
+                        <div class="quiz-option" data-correct="false">30 ตัว</div>
+                    </div>
+                </div>
+                <div class="quiz-question">
+                    <p><strong>2. ข้อสอบ 9 วิชาสามัญภาษาอังกฤษมีเวลาสอบกี่นาที?</strong></p>
+                    <div class="quiz-options">
+                        <div class="quiz-option" data-correct="false">60 นาที</div>
+                        <div class="quiz-option" data-correct="true">90 นาที</div>
+                        <div class="quiz-option" data-correct="false">120 นาที</div>
+                        <div class="quiz-option" data-correct="false">150 นาที</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tip-box">
+                <h3>เคล็ดลับสำคัญสำหรับผู้เรียน</h3>
+                <p>ปัญหาหลักของนักเรียนไทยคือการจำเฉพาะ "ชื่อ" ตัวอักษรได้ แต่ไม่รู้ "เสียง" ที่แท้จริง ซึ่งเป็นอุปสรรคต่อการอ่านคำศัพท์ใหม่ๆ การฝึกฟังและออกเสียงที่ถูกต้องจึงเป็นกุญแจสำคัญสู่ความสำเร็จ</p>
+                <div class="progress-container">
+                    <div class="progress-bar" id="learning-progress"></div>
+                </div>
+                <p><strong>เป้าหมายการเรียนรู้:</strong> ฝึกฝนอย่างน้อย 30 นาทีต่อวัน จะช่วยพัฒนาทักษะภาษาอังกฤษได้อย่างมีนัยสำคัญ</p>
+            </div>
+        </div>
+        
+        <!-- แท็บ: ตัวอักษรภาษาอังกฤษ -->
+        <div class="tab-content" id="alphabet">
+            <h2><i class="fas fa-font"></i> ตัวอักษรภาษาอังกฤษ: โครงสร้างพื้นฐานและการจำแนกประเภท</h2>
+            
+            <div class="alphabet-grid">
+                <div class="alphabet-card vowel">
+                    <div class="letter">A</div>
+                    <div class="name">เอ</div>
+                    <div class="sound">แอะ, อะ, อา</div>
+                </div>
+                <div class="alphabet-card">
+                    <div class="letter">B</div>
+                    <div class="name">บี</div>
+                    <div class="sound">เบอะ</div>
+                </div>
+                <div class="alphabet-card">
+                    <div class="letter">C</div>
+                    <div class="name">ซี</div>
+                    <div class="sound">เคอะ, สึ</div>
+                </div>
+                <div class="alphabet-card">
+                    <div class="letter">D</div>
+                    <div class="name">ดี</div>
+                    <div class="sound">เดอะ</div>
+                </div>
+                <div class="alphabet-card vowel">
+                    <div class="letter">E</div>
+                    <div class="name">อี</div>
+                    <div class="sound">เอะ, อี</div>
+                </div>
+                <div class="alphabet-card vowel">
+                    <div class="letter">I</div>
+                    <div class="name">ไอ</div>
+                    <div class="sound">อิ, ไอ</div>
+                </div>
+                <div class="alphabet-card">
+                    <div class="letter">F</div>
+                    <div class="name">เอฟ</div>
+                    <div class="sound">เฟอะ</div>
+                </div>
+                <div class="alphabet-card">
+                    <div class="letter">G</div>
+                    <div class="name">จี</div>
+                    <div class="sound">เกอะ, เจอะ</div>
+                </div>
+                <!-- สามารถเพิ่มตัวอักษรอื่นๆ ตามต้องการ -->
+            </div>
+            
+            <h3>ตารางเปรียบเทียบตัวอักษรภาษาอังกฤษ</h3>
+            <table class="alphabet-table">
+                <thead>
+                    <tr>
+                        <th>ตัวพิมพ์ใหญ่</th>
+                        <th>ตัวพิมพ์เล็ก</th>
+                        <th>ชื่อตัวอักษร</th>
+                        <th>เสียงของตัวอักษร</th>
+                        <th>เทียบเสียงอักษรไทย</th>
+                        <th>ตัวอย่างคำ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>A</td>
+                        <td>a</td>
+                        <td>เอ</td>
+                        <td>แอะ (อะ, อา, เอ)</td>
+                        <td>สระแอ, สระเอ, อะ, อา</td>
+                        <td>Arm, Ant, Air</td>
+                    </tr>
+                    <tr>
+                        <td>B</td>
+                        <td>b</td>
+                        <td>บี</td>
+                        <td>เบอะ</td>
+                        <td>บ. ใบไม้</td>
+                        <td>Bird, Bee, Blue</td>
+                    </tr>
+                    <tr>
+                        <td>C</td>
+                        <td>c</td>
+                        <td>ซี</td>
+                        <td>เคอะ / สึ</td>
+                        <td>ค. ควาย, ซ. โซ่</td>
+                        <td>Cat, Cow, Corn</td>
+                    </tr>
+                    <tr>
+                        <td>D</td>
+                        <td>d</td>
+                        <td>ดี</td>
+                        <td>เดอะ</td>
+                        <td>ด. เด็ก</td>
+                        <td>Dog, Day, Dream</td>
+                    </tr>
+                    <tr>
+                        <td>E</td>
+                        <td>e</td>
+                        <td>อี</td>
+                        <td>เอะ (อี)</td>
+                        <td>สระเอ, สระอี</td>
+                        <td>Egg, Excellent</td>
+                    </tr>
+                    <tr>
+                        <td>F</td>
+                        <td>f</td>
+                        <td>เอฟ</td>
+                        <td>เฟอะ</td>
+                        <td>ฟ. ฟัน, ฝ. ฝา</td>
+                        <td>Farm, Fish, Fog</td>
+                    </tr>
+                    <tr>
+                        <td>G</td>
+                        <td>g</td>
+                        <td>จี</td>
+                        <td>เกอะ / เจอะ</td>
+                        <td>ก. ไก่, จ. จาน</td>
+                        <td>Giraffe, Giant</td>
+                    </tr>
+                    <tr>
+                        <td>H</td>
+                        <td>h</td>
+                        <td>เอช</td>
+                        <td>เฮอะ</td>
+                        <td>ฮ. นกฮูก, ห. หีบ</td>
+                        <td>House, Hen</td>
+                    </tr>
+                    <tr>
+                        <td>I</td>
+                        <td>i</td>
+                        <td>ไอ</td>
+                        <td>อิ (ไอ)</td>
+                        <td>สระอิ, สระไอ</td>
+                        <td>Igloo, Important</td>
+                    </tr>
+                    <tr>
+                        <td>J</td>
+                        <td>j</td>
+                        <td>เจ</td>
+                        <td>เจอะ</td>
+                        <td>จ. จาน, ย. ยักษ์</td>
+                        <td>Jar, Jeans</td>
+                    </tr>
+                    <!-- เพิ่มแถวสำหรับตัวอักษรอื่นๆ ตามข้อมูลที่ให้มา -->
+                </tbody>
+            </table>
+            
+            <h3>การจำแนกประเภทตัวอักษร</h3>
+            
+            <div style="display: flex; flex-wrap: wrap; gap: 25px; margin: 2rem 0;">
+                <div style="flex: 1; min-width: 250px; background: linear-gradient(135deg, #ffeaea 0%, #e3f2fd 100%); padding: 2rem; border-radius: 15px; box-shadow: var(--shadow);">
+                    <h4 style="color: var(--secondary);">สระ (Vowels)</h4>
+                    <p><strong>มี 5 ตัว:</strong> A, E, I, O, U</p>
+                    <p>เสียงที่เปล่งออกมาจากช่องเสียงโดยตรง โดยไม่มีการกักอากาศภายในช่องปาก</p>
+                    <p><strong>หน้าที่:</strong> เป็นแกนกลางของพยางค์</p>
+                </div>
+                
+                <div style="flex: 1; min-width: 250px; background: linear-gradient(135deg, #ffeaea 0%, #e3f2fd 100%); padding: 2rem; border-radius: 15px; box-shadow: var(--shadow);">
+                    <h4 style="color: var(--primary);">พยัญชนะ (Consonants)</h4>
+                    <p><strong>มี 21 ตัว:</strong> B, C, D, F, G, H, J, K, L, M, N, P, Q, R, S, T, V, W, X, Y, Z</p>
+                    <p>เสียงที่เกิดจากการปิดกั้นการไหลของอากาศในช่องปาก</p>
+                    <p><strong>หน้าที่:</strong> ประกอบกับสระเพื่อสร้างพยางค์</p>
+                </div>
+                
+                <div style="flex: 1; min-width: 250px; background: linear-gradient(135deg, #ffeaea 0%, #e3f2fd 100%); padding: 2rem; border-radius: 15px; box-shadow: var(--shadow);">
+                    <h4 style="color: var(--secondary);">อักษรกึ่งสระ (Semivowels)</h4>
+                    <p><strong>W และ Y</strong></p>
+                    <p>ทำหน้าที่ได้ทั้งสองอย่าง ใช้สร้างเสียงควบกล้ำ (Diphthong)</p>
+                    <p><strong>ตัวอย่าง:</strong> boy, cow, yes, well</p>
+                </div>
+            </div>
+            
+            <div class="highlight-box">
+                <h4>ความสำคัญของการแยก "ชื่อ" และ "เสียง" ของตัวอักษร</h4>
+                <p>ตัวอักษรแต่ละตัวมี 3 องค์ประกอบที่ต้องเข้าใจ:</p>
+                <ol>
+                    <li><strong>รูป (Form):</strong> ลักษณะที่มองเห็นของตัวอักษร (A, a, B, b)</li>
+                    <li><strong>ชื่อ (Name):</strong> ชื่อเรียกของตัวอักษร (เอ, บี, ซี)</li>
+                    <li><strong>เสียง (Sound):</strong> เสียงที่ตัวอักษรเป็นตัวแทน (แอะ, เบอะ, เคอะ)</li>
+                </ol>
+                <p>การเข้าใจเสียงเป็นกุญแจสำคัญในการอ่านคำศัพท์ภาษาอังกฤษได้อย่างถูกต้อง</p>
+            </div>
+            
+            <h3>การเทียบเสียงอักษรภาษาอังกฤษ-ไทย</h3>
+            <p>การเทียบเคียงเสียงระหว่างสองภาษาสามารถช่วยให้ผู้เรียนเข้าใจและสะกดคำได้ง่ายขึ้น โดยเฉพาะอย่างยิ่งในการเขียนชื่อหรือคำทับศัพท์</p>
+            
+            <div class="strategy-card">
+                <h4>ตัวอย่างการเขียนชื่อภาษาไทยเป็นภาษาอังกฤษ</h4>
+                <ul>
+                    <li><strong>ประพันธ์:</strong> Pra (ประ) + pan (พันธ์) → Prapan</li>
+                    <li><strong>นิวัฒน์:</strong> Ni (นิ) + wat (วัฒน์) → Niwat</li>
+                    <li><strong>สุรีย์:</strong> Su (สุ) + ree (รีย์) → Suree</li>
+                    <li><strong>สมศรี:</strong> Som (สม) + sri (ศรี) → Somsri</li>
+                    <li><strong>ทองคำ:</strong> Thong (ทอง) + kham (คำ) → Thongkham</li>
+                </ul>
+                <p><strong>หลักการสำคัญ:</strong> ภาษาอังกฤษไม่มีตัวการันต์</p>
+            </div>
+        </div>
+        
+        <!-- แท็บ: กลยุทธ์เตรียมสอบ -->
+        <div class="tab-content" id="exam-strategy">
+            <h2><i class="fas fa-graduation-cap"></i> กลยุทธ์เตรียมสอบภาษาอังกฤษระดับมัธยมปลาย</h2>
+            
+            <h3>การวิเคราะห์ข้อสอบ GAT และ 9 วิชาสามัญ</h3>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>คุณสมบัติ</th>
+                        <th>GAT</th>
+                        <th>9 วิชาสามัญ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>จำนวนข้อ</td>
+                        <td>60 ข้อ</td>
+                        <td>80 ข้อ</td>
+                    </tr>
+                    <tr>
+                        <td>เวลาสอบ</td>
+                        <td>1 ชั่วโมง 30 นาที</td>
+                        <td>1 ชั่วโมง 30 นาที</td>
+                    </tr>
+                    <tr>
+                        <td>เวลาเฉลี่ยต่อข้อ</td>
+                        <td>1 นาที 30 วินาที</td>
+                        <td>1 นาที 7 วินาที</td>
+                    </tr>
+                    <tr>
+                        <td>ระดับความยาก</td>
+                        <td>ง่ายกว่า</td>
+                        <td>ยากกว่า</td>
+                    </tr>
+                    <tr>
+                        <td>โครงสร้างข้อสอบ</td>
+                        <td>Conversation, Grammar, Reading, Vocabulary</td>
+                        <td>เน้น Reading เป็นหลัก</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3>เทคนิคการเรียนรู้คำศัพท์ (Vocabulary)</h3>
+            
+            <div class="strategy-card">
+                <h4>Memologic (การจำศัพท์โดยใช้ความจำและตรรกะ)</h4>
+                <p>เชื่อมโยงคำศัพท์กับภาพ เสียง หรือเรื่องราวที่ใกล้ตัว</p>
+                <div class="mnemonic">
+                    <p><strong>ตัวอย่าง:</strong> คำว่า <strong>Corpulent</strong> (adj.) แปลว่า อ้วน</p>
+                    <p><strong>เทคนิคการจำ:</strong> พ้องเสียงกับภาษาไทยว่า "คอไปแล้น" (คอหายไปแล้ว) เพราะอ้วนจนไม่มีคอ</p>
+                </div>
+                <div class="mnemonic">
+                    <p><strong>ตัวอย่าง:</strong> คำว่า <strong>Indifferent</strong> (adj.) แปลว่า เฉยเมย ไม่สนใจโลก</p>
+                    <p><strong>เทคนิคการจำ:</strong> "อินดี้ friend" คือเพื่อนที่เป็นคนอินดี้ ไม่สนใจใคร</p>
+                </div>
+            </div>
+            
+            <div class="strategy-card">
+                <h4>Memolody (การจำศัพท์ผ่านบทเพลงและบทกลอน)</h4>
+                <p>นำคำศัพท์ที่มีความหมายใกล้เคียงกันมาร้อยเรียงเป็นบทกลอนหรือเพลง</p>
+                <div class="mnemonic">
+                    <p><strong>ตัวอย่างกลอนความสับสน:</strong></p>
+                    <p>"Clutter สับสนยุ่งเหยิง chaos, mess เหลือเกิน<br>
+                    disruption ไปไหน confusion, disorder กลางใจ<br>
+                    anarchy, upheaval เกินไป turbulence ไม่ไหว<br>
+                    turmoil ลำบากจัง disarray ไม่ไหว jumbo เละจัง"</p>
+                </div>
+                <div class="mnemonic">
+                    <p><strong>ตัวอย่างเพลงรักเธอที่สุด:</strong></p>
+                    <p>"Utter, absolute, entire, altogether<br>
+                    Complete, comprehensive, downright, definite<br>
+                    Total, whole, thorough ทั้งหมดทั้งสิ้น<br>
+                    จำให้ขึ้นใจคำว่า 'ที่สุด' ในภาษาอังกฤษ"</p>
+                </div>
+            </div>
+            
+            <h3>กฎไวยากรณ์สำคัญที่ออกสอบบ่อย</h3>
+            
+            <div class="strategy-card">
+                <h4>Subject-Verb Agreement (ความสอดคล้องระหว่างประธานและกริยา)</h4>
+                <p><strong>กฎส่วนขยายคือขยะ:</strong> ไม่ต้องสนใจส่วนขยายที่มาคั่นกลางระหว่างประธานและกริยา</p>
+                <p><strong>ตัวอย่าง:</strong> Tanya with her family <strong>is</strong> here. (ประธานคือ Tanya เอกพจน์)</p>
+                <p><strong>กฎเปอร์เซ็นต์:</strong> คำที่บอกปริมาณ (เช่น all, most, some, half) กริยาจะผันตามคำนามที่อยู่หลัง of</p>
+                <p><strong>ตัวอย่าง:</strong> All of the students <strong>are</strong>... (นามพหูพจน์ + กริยาพหูพจน์)</p>
+            </div>
+            
+            <div class="strategy-card">
+                <h4>Tenses (กาล)</h4>
+                <p><strong>กลอนช่วยจำเท็นส์คู่ในอดีต:</strong></p>
+                <div class="mnemonic">
+                    <p>"เหตุเกิดพร้อมกันเมื่อไหร่ ทั้งคู่ต้องใช้ Past Con อย่าลืม"</p>
+                    <p>"Past Con เกิดอยู่แบบนี้ ถ้าเกิดแทรกใหม่ต้องใช้ Past Sim"</p>
+                    <p>"เกิดก่อน Past Perfect ไง เกิดหลังต้องใช้ Past Sim แน่นอน"</p>
+                </div>
+                <p><strong>Present/Past/Future Perfect vs. Perfect Continuous:</strong></p>
+                <ul>
+                    <li><strong>Perfect:</strong> เน้นที่ ผลลัพธ์ (Result) ของการกระทำ</li>
+                    <li><strong>Perfect Continuous:</strong> เน้นที่ ช่วงเวลา (Duration) และความต่อเนื่อง</li>
+                </ul>
+            </div>
+            
+            <div class="tip-box">
+                <h4>เคล็ดลับการทำข้อสอบบทสนทนา (Conversation)</h4>
+                <p>ใช้หลัก <strong>3S</strong>:</p>
+                <ul>
+                    <li><strong>Situation</strong> (สถานการณ์): บทสนทนาเกิดขึ้นที่ไหน</li>
+                    <li><strong>Speaker</strong> (ผู้พูด): ใครคุยกับใคร</li>
+                    <li><strong>Status</strong> (ระดับภาษา): ความสัมพันธ์ของผู้พูด</li>
+                </ul>
+                <p>และเลือกคำตอบที่เป็นคนดี/สุภาพที่สุดเมื่อมีตัวเลือกที่ถูกต้องมากกว่าหนึ่งข้อ</p>
+            </div>
+            
+            <h3>เทคนิคการอ่านจับใจความ (Reading Comprehension)</h3>
+            
+            <div class="strategy-card">
+                <h4>โครงสร้างย่อหน้า (Paragraph Structure)</h4>
+                <p>ย่อหน้าทั่วไปประกอบด้วย 3 ส่วนสำคัญ:</p>
+                <ol>
+                    <li><strong>Topic Sentence:</strong> ประโยคใจความหลักของย่อหน้า (มักอยู่ประโยคแรก)</li>
+                    <li><strong>Supporting Sentences:</strong> ประโยคให้รายละเอียด ตัวอย่าง หรือเหตุผล</li>
+                    <li><strong>Concluding Sentence:</strong> ประโยคสรุปใจความสำคัญอีกครั้ง (มักอยู่ท้ายสุด)</li>
+                </ol>
+                <p><strong>คำเชื่อมที่พบบ่อย:</strong> First, Moreover, In addition, Finally, Therefore</p>
+            </div>
+        </div>
+        
+        <!-- แท็บ: หลักสูตรม.ปลาย -->
+        <div class="tab-content" id="curriculum">
+            <h2><i class="fas fa-book"></i> โครงสร้างหลักสูตรภาษาอังกฤษระดับมัธยมปลาย</h2>
+            
+            <div style="display: flex; flex-wrap: wrap; gap: 25px; margin: 2rem 0;">
+                <div style="flex: 1; min-width: 300px; background: white; padding: 2rem; border-radius: 15px; box-shadow: var(--shadow); border-top: 4px solid var(--primary);">
+                    <h3 style="color: var(--primary);">มัธยมศึกษาปีที่ 4</h3>
+                    <h4>เทอม 1</h4>
+                    <ul>
+                        <li>Present Time: Simple Present & Present Continuous</li>
+                        <li>Frequency Adverbs</li>
+                        <li>Nouns and Pronouns</li>
+                        <li>รูปพหูพจน์, Subject-Verb Agreement</li>
+                    </ul>
+                    <h4>เทอม 2</h4>
+                    <ul>
+                        <li>Past Time: Simple Past & Past Continuous</li>
+                        <li>Time Clauses, used to</li>
+                        <li>Question Words</li>
+                        <li>การสร้างคำถามด้วย Where, Why, Who, What, Which, Whose, How</li>
+                    </ul>
+                </div>
+                
+                <div style="flex: 1; min-width: 300px; background: white; padding: 2rem; border-radius: 15px; box-shadow: var(--shadow); border-top: 4px solid var(--secondary);">
+                    <h3 style="color: var(--secondary);">มัธยมศึกษาปีที่ 5</h3>
+                    <h4>เทอม 1</h4>
+                    <ul>
+                        <li>Modal Auxiliaries: Can, Could, May, Might, Should, Must, Had better</li>
+                        <li>Connecting Ideas: And, But, Or, So, Because, Although</li>
+                    </ul>
+                    <h4>เทอม 2</h4>
+                    <ul>
+                        <li>Future Time: Be going to & Will, Present Continuous for Future</li>
+                        <li>Count/Noncount Nouns & Articles: A lot of, many/much, a few/a little</li>
+                        <li>Adjective Clauses: Who, Whom, That, Which</li>
+                        <li>Gerunds and Infinitives</li>
+                        <li>The Passive Voice</li>
+                    </ul>
+                </div>
+                
+                <div style="flex: 1; min-width: 300px; background: white; padding: 2rem; border-radius: 15px; box-shadow: var(--shadow); border-top: 4px solid var(--primary);">
+                    <h3 style="color: var(--primary);">มัธยมศึกษาปีที่ 6</h3>
+                    <h4>เทอม 1</h4>
+                    <ul>
+                        <li>The Present Perfect & Past Perfect</li>
+                        <li>Simple Past vs. Present Perfect, Since/For</li>
+                        <li>Present Perfect Continuous, Past Perfect</li>
+                        <li>Noun Clauses</li>
+                        <li>การใช้ Noun Clauses กับ Question Words, If/Whether, Reported Speech</li>
+                    </ul>
+                    <h4>เทอม 2</h4>
+                    <ul>
+                        <li>Phrasal Verbs</li>
+                        <li>Preposition Combinations</li>
+                        <li>Conditional Sentences and Wishes</li>
+                        <li>Comparisons: การเปรียบเทียบขั้นกว่าและขั้นสูงสุด (as...as, more...than, the most)</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="highlight-box">
+                <h4>การวางรากฐานอย่างเป็นระบบ</h4>
+                <p>หลักสูตรภาษาอังกฤษระดับม.ปลายถูกออกแบบมาเพื่อสร้างเสริมทักษะต่างๆ อย่างเป็นลำดับขั้น จากพื้นฐานไปสู่เนื้อหาที่ซับซ้อนขึ้น ซึ่งสอดคล้องกับความต้องการของข้อสอบเข้ามหาวิทยาลัย</p>
+                <p><strong>คำแนะนำ:</strong> นักเรียนควรทบทวนเนื้อหาทั้ง 3 ปีอย่างเป็นระบบ โดยเฉพาะหัวข้อที่ออกสอบบ่อย เช่น Subject-Verb Agreement, Tenses, และ Reading Comprehension</p>
+            </div>
+        </div>
+        
+        <!-- แท็บ: แหล่งเรียนรู้เพิ่มเติม -->
+        <div class="tab-content" id="resources">
+            <h2><i class="fas fa-link"></i> แหล่งเรียนรู้เพิ่มเติม</h2>
+            
+            <div class="strategy-card">
+                <h4>เว็บไซต์ฝึกภาษาอังกฤษ</h4>
+                <ul>
+                    <li><strong>British Council LearnEnglish</strong> - แหล่งเรียนรู้ภาษาอังกฤษคุณภาพสูงจากสหราชอาณาจักร</li>
+                    <li><strong>BBC Learning English</strong> - มีเนื้อหาหลากหลายระดับ พร้อมวิดีโอและแบบฝึกหัด</li>
+                    <li><strong>Duolingo</strong> - แพลตฟอร์มการเรียนรู้ภาษาแบบเกมมิฟิเคชัน</li>
+                    <li><strong>Quizlet</strong> - สำหรับสร้างบัตรคำศัพท์และแบบทดสอบ</li>
+                    <li><strong>EnglishCentral</strong> - เรียนรู้ผ่านวิดีโอพร้อมระบบจดจำเสียง</li>
+                </ul>
+            </div>
+            
+            <div class="strategy-card">
+                <h4>แอปพลิเคชันแนะนำ</h4>
+                <ul>
+                    <li><strong>Memrise</strong> - สำหรับการจำคำศัพท์ด้วยเทคนิคการทบทวนแบบเว้นระยะ</li>
+                    <li><strong>Grammarly</strong> - ตรวจสอบไวยากรณ์ภาษาอังกฤษและแนะนำการปรับปรุง</li>
+                    <li><strong>English Listening & Speaking</strong> - ฝึกทักษะการฟังและพูด</li>
+                    <li><strong>Cake</strong> - เรียนรู้ภาษาอังกฤษผ่านคลิปวิดีโอสั้นๆ</li>
+                    <li><strong>HelloTalk</strong> - ฝึกภาษากับเจ้าของภาษาโดยตรง</li>
+                </ul>
+            </div>
+            
+            <div class="strategy-card">
+                <h4>ช่อง YouTube สอนภาษาอังกฤษสำหรับคนไทย</h4>
+                <ul>
+                    <li><strong>อาจารย์อดัม (Adam Bradshaw)</strong> - สอนภาษาอังกฤษด้วยสำเนียงอเมริกัน</li>
+                    <li><strong>KruDew - ครูเดว</strong> - เนื้อหาครอบคลุมการสอบต่างๆ</li>
+                    <li><strong>English by Chris</strong> - สอนไวยากรณ์และเทคนิคการสอบ</li>
+                    <li><strong>Angkriz</strong> - สอนภาษาอังกฤษแบบเป็นกันเอง</li>
+                    <li><strong>Unfox English</strong> - เน้นการออกเสียงและสำเนียง</li>
+                </ul>
+            </div>
+            
+            <div class="strategy-card">
+                <h4>หนังสือแนะนำ</h4>
+                <ul>
+                    <li><strong>สรุปเข้มภาษาอังกฤษ ม.ปลาย</strong> - ครอบคลุมเนื้อหาทั้ง 3 ปี</li>
+                    <li><strong>เก่ง Grammar ฉบับการ์ตูน</strong> - เรียนรู้ไวยากรณ์ผ่านการ์ตูน</li>
+                    <li><strong>ศัพท์ออกข้อสอบบ่อย 1,000 คำ</strong> - รวบรวมคำศัพท์สำคัญ</li>
+                    <li><strong>ตะลุยโจทย์ GAT English</strong> - เตรียมความพร้อมสำหรับการสอบ</li>
+                    <li><strong>English Structure & Writing</strong> - เรียนรู้โครงสร้างและการเขียน</li>
+                </ul>
+            </div>
+            
+            <div class="tip-box">
+                <h4>คำแนะนำสุดท้าย</h4>
+                <p>ความสำเร็จในการเรียนภาษาอังกฤษไม่ได้มาจากการท่องจำเพียงอย่างเดียว แต่เกิดจากการฝึกฝนอย่างสม่ำเสมอและใช้เทคนิคที่เหมาะสมกับตัวเอง ลองนำเทคนิคต่างๆ ในเว็บไซต์นี้ไปปรับใช้ และค้นหาวิธีการเรียนรู้ที่เหมาะกับคุณที่สุด</p>
+                <p><strong>จำไว้เสมอ:</strong> การเรียนภาษาเป็นกระบวนการที่ต้องใช้เวลาและความอดทน เริ่มจากพื้นฐานให้แน่น แล้วค่อยๆ พัฒนาขึ้นไปทีละขั้น</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="quick-nav">
+        <a href="#overview">ภาพรวม</a>
+        <a href="#alphabet">ตัวอักษร</a>
+        <a href="#exam-strategy">กลยุทธ์สอบ</a>
+        <a href="#curriculum">หลักสูตร</a>
+        <a href="#resources">แหล่งเรียนรู้</a>
+    </div>
+    
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>© 2023 คู่มือภาษาอังกฤษ: ตัวอักษรและกลยุทธ์เตรียมสอบ</p>
+            <p>ข้อมูลอ้างอิงจากเอกสารสรุปสำหรับผู้บริหาร</p>
+            <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--gray);">ออกแบบและพัฒนาเพื่อส่งเสริมการเรียนรู้ภาษาอังกฤษสำหรับนักเรียนไทย</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript สำหรับการเปลี่ยนแท็บ
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('.tab');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // ลบคลาส active จากแท็บและเนื้อหาทั้งหมด
+                    tabs.forEach(t => t.classList.remove('active'));
+                    tabContents.forEach(content => content.classList.remove('active'));
+                    
+                    // เพิ่มคลาส active ให้แท็บที่คลิก
+                    tab.classList.add('active');
+                    
+                    // แสดงเนื้อหาของแท็บที่คลิก
+                    const tabId = tab.getAttribute('data-tab');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+            
+            // แอนิเมชัน progress bar
+            const progressBar = document.getElementById('learning-progress');
+            if (progressBar) {
+                setTimeout(() => {
+                    progressBar.style.width = '75%';
+                }, 500);
+            }
+            
+            // เพิ่มเอฟเฟกต์เมื่อเลื่อนดูเนื้อหา
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+            
+            // กำหนดให้องค์ประกอบที่มีเอฟเฟกต์ fade-in
+            const fadeElements = document.querySelectorAll('.strategy-card, .highlight-box, .tip-box');
+            fadeElements.forEach(el => {
+                el.style.opacity = 0;
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(el);
+            });
+            
+            // ฟังก์ชันสำหรับแบบทดสอบ
+            const quizOptions = document.querySelectorAll('.quiz-option');
+            quizOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    const isCorrect = this.getAttribute('data-correct') === 'true';
+                    
+                    // ลบคลาสทั้งหมดก่อนเพิ่มใหม่
+                    quizOptions.forEach(opt => {
+                        opt.classList.remove('correct', 'incorrect');
+                    });
+                    
+                    // เพิ่มคลาสตามคำตอบ
+                    if (isCorrect) {
+                        this.classList.add('correct');
+                    } else {
+                        this.classList.add('incorrect');
+                        
+                        // แสดงคำตอบที่ถูกต้อง
+                        const parent = this.parentElement;
+                        const correctOption = parent.querySelector('[data-correct="true"]');
+                        if (correctOption) {
+                            correctOption.classList.add('correct');
+                        }
+                    }
+                });
+            });
+            
+            // ฟังก์ชันสำหรับปุ่มกลับไปด้านบน
+            const backToTop = document.querySelector('.back-to-top');
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    backToTop.classList.add('show');
+                } else {
+                    backToTop.classList.remove('show');
+                }
+            });
+            
+            backToTop.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+            
+            // ฟังก์ชันสำหรับเมนูนำทางเร็ว
+            const quickNav = document.querySelector('.quick-nav');
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 500 && window.innerWidth > 768) {
+                    quickNav.style.display = 'block';
+                } else {
+                    quickNav.style.display = 'none';
+                }
+            });
+            
+            // การค้นหา
+            const searchInput = document.querySelector('.search-box input');
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                if (searchTerm.length > 2) {
+                    // ในเว็บจริงจะมีการค้นหาจริงๆ ที่นี่เป็นเพียงตัวอย่าง
+                    console.log('กำลังค้นหา:', searchTerm);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
