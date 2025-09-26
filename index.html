@@ -3,1256 +3,2733 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ภาษาอังกฤษ: ตัวอักษรและกลยุทธ์เตรียมสอบ</title>
+    <title>วิทยาศาสตร์ ม.ปลาย - รวมทุกเนื้อหาสำคัญ</title>
+    <meta name="description" content="แหล่งเรียนรู้วิทยาศาสตร์ระดับมัธยมศึกษาตอนปลาย ครอบคลุมทุกวิชาหลักและเนื้อหาตามหลักสูตร">
+    <meta name="keywords" content="วิทยาศาสตร์, ม.ปลาย, ชีววิทยา, เคมี, ฟิสิกส์, เรียนออนไลน์">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary: #e74c3c;
+            --primary: #2c3e50;
             --secondary: #3498db;
-            --accent: #2ecc71;
-            --light: #f9f9f9;
+            --accent: #e74c3c;
+            --light: #f8f9fa;
             --dark: #2c3e50;
-            --gray: #95a5a6;
-            --red-light: #ffebee;
-            --blue-light: #e3f2fd;
-            --shadow: 0 4px 12px rgba(0,0,0,0.1);
+            --success: #2ecc71;
+            --warning: #f39c12;
+            --info: #1abc9c;
+            --text: #333;
+            --text-light: #777;
+            --border: #e0e0e0;
+            --bg: #f5f7fa;
+            --card-bg: #ffffff;
+            --header-bg: linear-gradient(135deg, #2c3e50, #3498db);
+            --footer-bg: #2c3e50;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.15);
+            --transition: all 0.3s ease;
+            --radius: 12px;
+            --radius-sm: 8px;
+        }
+
+        .dark-mode {
+            --primary: #3498db;
+            --secondary: #2c3e50;
+            --light: #2c3e50;
+            --dark: #f8f9fa;
+            --text: #f0f0f0;
+            --text-light: #b0b0b0;
+            --border: #444;
+            --bg: #1a1a2e;
+            --card-bg: #16213e;
+            --header-bg: linear-gradient(135deg, #16213e, #0f3460);
+            --footer-bg: #16213e;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.4);
         }
         
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Sarabun', 'Kanit', sans-serif;
+            transition: var(--transition);
         }
         
         body {
-            background: linear-gradient(135deg, var(--red-light) 0%, var(--blue-light) 100%);
-            color: #333;
+            background-color: var(--bg);
+            color: var(--text);
             line-height: 1.6;
-            min-height: 100vh;
+            font-family: 'Segoe UI', 'TH Sarabun New', 'TH Niramit AS', sans-serif;
+            padding-top: 60px;
         }
         
-        .container {
+        /* Header Styles */
+        header {
+            background: var(--header-bg);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        
+        .header-content {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         
-        header {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .theme-toggle {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
             color: white;
-            padding: 2.5rem 0;
-            text-align: center;
-            border-radius: 0 0 30px 30px;
-            margin-bottom: 2.5rem;
-            box-shadow: var(--shadow);
-            position: relative;
-            overflow: hidden;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
-        header::before {
-            content: "";
-            position: absolute;
+        /* Navigation */
+        nav {
+            background-color: var(--card-bg);
+            padding: 0.8rem;
+            position: sticky;
+            top: 60px;
+            z-index: 900;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .main-menu {
+            display: flex;
+            list-style-type: none;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        
+        .main-menu li a {
+            color: var(--text);
+            text-decoration: none;
+            padding: 0.6rem 1rem;
+            border-radius: 4px;
+            transition: var(--transition);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+        
+        .main-menu li a:hover,
+        .main-menu li a.active {
+            background-color: var(--secondary);
+            color: white;
+        }
+        
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text);
+            cursor: pointer;
+        }
+        
+        .search-container {
+            display: flex;
+            align-items: center;
+            background: var(--light);
+            border-radius: 4px;
+            padding: 0.3rem 0.8rem;
+            transition: var(--transition);
+        }
+        
+        .search-container:focus-within {
+            box-shadow: 0 0 0 2px var(--secondary);
+        }
+        
+        .search-container input {
+            border: none;
+            background: transparent;
+            padding: 0.5rem;
+            color: var(--text);
+            outline: none;
+            width: 200px;
+        }
+        
+        .search-container button {
+            background: none;
+            border: none;
+            color: var(--text);
+            cursor: pointer;
+        }
+        
+        /* Mobile menu */
+        .mobile-menu-container {
+            position: fixed;
+            top: 60px;
+            left: -300px;
+            width: 300px;
+            height: calc(100vh - 60px);
+            background: var(--card-bg);
+            z-index: 999;
+            overflow-y: auto;
+            transition: var(--transition);
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .mobile-menu-container.open {
+            left: 0;
+        }
+        
+        .mobile-menu {
+            list-style-type: none;
+            padding: 1rem;
+        }
+        
+        .mobile-menu li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .mobile-menu li a {
+            display: block;
+            padding: 0.8rem 1rem;
+            color: var(--text);
+            text-decoration: none;
+            border-radius: 4px;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .mobile-menu li a:hover,
+        .mobile-menu li a.active {
+            background-color: var(--secondary);
+            color: white;
+        }
+        
+        .overlay {
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" opacity="0.1"><text x="50%" y="50%" font-family="Arial" font-size="14" text-anchor="middle" dominant-baseline="middle">A B C D E F G</text></svg>');
-            opacity: 0.1;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 998;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
         }
         
-        h1 {
-            font-size: 2.8rem;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        .overlay.open {
+            opacity: 1;
+            visibility: visible;
         }
         
-        .subtitle {
-            font-size: 1.3rem;
-            opacity: 0.95;
-            max-width: 800px;
-            margin: 0 auto;
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            gap: 2rem;
         }
         
-        .nav-tabs {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 2.5rem;
-            flex-wrap: wrap;
-            background: white;
-            border-radius: 50px;
-            padding: 8px;
+        /* Sidebar */
+        .sidebar {
+            background-color: var(--card-bg);
+            border-radius: var(--radius);
             box-shadow: var(--shadow);
+            padding: 1.5rem;
+            height: fit-content;
+            position: sticky;
+            top: 140px;
+            max-height: calc(100vh - 180px);
+            overflow-y: auto;
+        }
+        
+        .sidebar h3 {
+            color: var(--primary);
+            margin-bottom: 1.2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--secondary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .subject-list {
+            list-style-type: none;
+        }
+        
+        .subject-list li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .subject-list a {
+            color: var(--text);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem;
+            border-radius: var(--radius-sm);
+            transition: var(--transition);
+        }
+        
+        .subject-list a:hover {
+            background-color: var(--light);
+            color: var(--secondary);
+            padding-left: 1rem;
+        }
+        
+        .subject-list a.active {
+            background-color: var(--secondary);
+            color: white;
+        }
+        
+        /* Accordion for sub-topics */
+        .accordion {
+            margin-top: 0.5rem;
+            margin-left: 1.5rem;
+            border-left: 2px solid var(--secondary);
+            padding-left: 0.5rem;
+            display: none;
+        }
+        
+        .accordion.show {
+            display: block;
+        }
+        
+        .accordion a {
+            font-size: 0.9rem;
+            padding: 0.4rem 0.6rem;
+            display: block;
+        }
+        
+        .has-subtopics {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .has-subtopics::after {
+            content: '▸';
+            transition: var(--transition);
+        }
+        
+        .has-subtopics.open::after {
+            transform: rotate(90deg);
+        }
+        
+        /* Content Area */
+        .content {
+            background-color: var(--card-bg);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            min-height: 500px;
+        }
+        
+        .content h2 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--secondary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .content-section {
+            margin-bottom: 2.5rem;
+        }
+        
+        .content-section h3 {
+            color: var(--secondary);
+            margin: 1.5rem 0 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .content-section h4 {
+            color: var(--primary);
+            margin: 1.2rem 0 0.8rem;
+            padding-left: 0.5rem;
+            border-left: 3px solid var(--accent);
+        }
+        
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .card {
+            background-color: var(--light);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .card-header {
+            background-color: var(--secondary);
+            color: white;
+            padding: 1rem;
+            font-weight: 500;
+        }
+        
+        .card-body {
+            padding: 1.2rem;
+        }
+        
+        /* Quiz styles */
+        .quiz {
+            background-color: var(--light);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .quiz-question {
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        
+        .quiz-options {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .quiz-option {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .quiz-submit {
+            background-color: var(--secondary);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 0.5rem;
+            transition: var(--transition);
+        }
+        
+        .quiz-submit:hover {
+            background-color: var(--primary);
+        }
+        
+        .quiz-result {
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: 4px;
+            display: none;
+        }
+        
+        .quiz-result.correct {
+            background-color: rgba(46, 204, 113, 0.2);
+            border: 1px solid var(--success);
+            display: block;
+        }
+        
+        .quiz-result.incorrect {
+            background-color: rgba(231, 76, 60, 0.2);
+            border: 1px solid var(--accent);
+            display: block;
+        }
+        
+        /* Tabs for content sections */
+        .tabs {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid var(--border);
+            overflow-x: auto;
         }
         
         .tab {
-            padding: 14px 28px;
+            padding: 0.5rem 1rem;
             cursor: pointer;
-            border-radius: 50px;
-            transition: all 0.4s ease;
-            font-weight: bold;
-            margin: 0 5px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex: 1;
-            min-width: 150px;
-            text-align: center;
+            border-radius: 4px 4px 0 0;
+            white-space: nowrap;
+            transition: var(--transition);
         }
         
         .tab:hover {
-            background: rgba(231, 76, 60, 0.1);
+            background-color: var(--light);
         }
         
         .tab.active {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            background-color: var(--secondary);
             color: white;
-            box-shadow: 0 4px 10px rgba(231, 76, 60, 0.3);
-        }
-        
-        .tab i {
-            margin-right: 8px;
         }
         
         .tab-content {
             display: none;
-            background: white;
-            padding: 2.5rem;
-            border-radius: 20px;
-            box-shadow: var(--shadow);
-            margin-bottom: 2.5rem;
-            border: 1px solid rgba(231, 76, 60, 0.1);
+            animation: fadeIn 0.3s ease;
         }
         
         .tab-content.active {
             display: block;
-            animation: fadeIn 0.6s ease;
         }
         
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(15px); }
-            to { opacity: 1; transform: translateY(0); }
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
         
-        h2 {
-            color: var(--primary);
-            margin-bottom: 1.8rem;
-            padding-bottom: 0.8rem;
-            border-bottom: 3px solid var(--primary);
-            font-size: 2.2rem;
-            display: flex;
-            align-items: center;
+        /* Definition list */
+        .definition-list {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
         }
         
-        h2 i {
-            margin-right: 10px;
-            color: var(--secondary);
+        .definition-list li {
+            margin-bottom: 0.8rem;
         }
         
-        h3 {
-            color: var(--dark);
-            margin: 1.8rem 0 1.2rem 0;
-            font-size: 1.6rem;
-            position: relative;
-            padding-left: 15px;
-        }
-        
-        h3::before {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 0;
-            height: 100%;
-            width: 5px;
-            background: var(--secondary);
-            border-radius: 3px;
-        }
-        
-        .highlight-box {
-            background: linear-gradient(135deg, #ffeaea 0%, #e3f2fd 100%);
-            border-left: 5px solid var(--primary);
-            padding: 1.5rem;
-            margin: 2rem 0;
-            border-radius: 0 12px 12px 0;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-        }
-        
-        .alphabet-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 2rem 0;
-            box-shadow: var(--shadow);
-            border-radius: 10px;
-            overflow: hidden;
-        }
-        
-        .alphabet-table th {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
-            padding: 15px;
-            text-align: left;
-            font-weight: 600;
-        }
-        
-        .alphabet-table td {
-            padding: 12px 15px;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .alphabet-table tr:nth-child(even) {
-            background: #f9f9f9;
-        }
-        
-        .alphabet-table tr:hover {
-            background: #f0f7ff;
-        }
-        
-        .comparison-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 2rem 0;
-            box-shadow: var(--shadow);
-            border-radius: 10px;
-            overflow: hidden;
-        }
-        
-        .comparison-table th, .comparison-table td {
-            padding: 15px;
-            border: 1px solid #ddd;
-            text-align: center;
-        }
-        
-        .comparison-table th {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
-            font-weight: 600;
-        }
-        
-        .comparison-table tr:nth-child(even) {
-            background: #f9f9f9;
-        }
-        
-        .strategy-card {
-            background: white;
-            border-radius: 12px;
-            padding: 2rem;
-            margin: 1.5rem 0;
-            box-shadow: var(--shadow);
-            border-left: 5px solid var(--secondary);
-            transition: transform 0.3s ease;
-        }
-        
-        .strategy-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .strategy-card h4 {
-            color: var(--secondary);
-            margin-bottom: 1rem;
-            font-size: 1.4rem;
-            display: flex;
-            align-items: center;
-        }
-        
-        .strategy-card h4::before {
-            content: "•";
-            margin-right: 10px;
-            color: var(--primary);
-            font-size: 2rem;
-        }
-        
-        .tip-box {
-            background: linear-gradient(135deg, #fff3e0 0%, #e8f5e9 100%);
-            border-left: 5px solid #ff9800;
-            padding: 1.8rem;
-            margin: 2rem 0;
-            border-radius: 0 12px 12px 0;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-        }
-        
-        .mnemonic {
-            background: #f0f7ff;
-            border-radius: 12px;
-            padding: 1.8rem;
-            margin: 1.8rem 0;
-            border: 2px dashed var(--secondary);
-            position: relative;
-        }
-        
-        .mnemonic::before {
-            content: "เทคนิคช่วยจำ";
-            position: absolute;
-            top: -12px;
-            left: 20px;
-            background: var(--secondary);
-            color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.9rem;
+        .definition-term {
             font-weight: bold;
+            color: var(--primary);
         }
         
-        .alphabet-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-            gap: 15px;
-            margin: 2rem 0;
+        /* Table improvements */
+        .table-container {
+            overflow-x: auto;
+            margin: 1.5rem 0;
         }
         
-        .alphabet-card {
-            background: white;
-            border-radius: 10px;
-            padding: 20px 10px;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            min-width: 500px;
+        }
+        
+        table, th, td {
+            border: 1px solid var(--border);
+        }
+        
+        th, td {
+            padding: 0.8rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: var(--light);
+            color: var(--primary);
+        }
+        
+        tr:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.02);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--footer-bg);
+            color: white;
             text-align: center;
-            box-shadow: var(--shadow);
-            transition: all 0.3s ease;
-            border-top: 4px solid var(--primary);
-            cursor: pointer;
+            padding: 2rem;
+            margin-top: 3rem;
         }
         
-        .alphabet-card.vowel {
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* ========== HOMEPAGE STYLES ========== */
+        .hero-section {
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+            color: white;
+            padding: 4rem 2rem;
+            border-radius: var(--radius);
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" opacity="0.1"><path d="M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z" fill="white"/></svg>');
+            background-size: 300px;
+            opacity: 0.1;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero-section h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .hero-section p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: white;
+            color: var(--primary);
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: var(--transition);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        
+        .feature-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .feature-card {
+            background-color: var(--card-bg);
+            border-radius: var(--radius);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
             border-top: 4px solid var(--secondary);
         }
         
-        .alphabet-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
         }
         
-        .alphabet-card .letter {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: var(--primary);
-            margin-bottom: 5px;
-        }
-        
-        .alphabet-card.vowel .letter {
+        .feature-card i {
+            font-size: 3rem;
             color: var(--secondary);
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
         
-        .alphabet-card .name {
-            font-size: 0.9rem;
-            color: var(--dark);
-        }
-        
-        .alphabet-card .sound {
-            font-size: 0.8rem;
-            color: var(--gray);
-            margin-top: 5px;
-        }
-        
-        .progress-container {
-            background: #f0f0f0;
-            border-radius: 10px;
-            height: 12px;
-            margin: 1.5rem 0;
-            overflow: hidden;
-        }
-        
-        .progress-bar {
-            height: 100%;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            border-radius: 10px;
-            width: 0;
-            transition: width 1s ease-in-out;
-        }
-        
-        footer {
-            text-align: center;
-            padding: 2.5rem 0;
-            margin-top: 3rem;
-            color: var(--dark);
-            border-top: 1px solid rgba(0,0,0,0.1);
-            background: rgba(255,255,255,0.7);
-            border-radius: 20px 20px 0 0;
-        }
-        
-        .stats {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            margin: 2rem 0;
-        }
-        
-        .stat-card {
-            background: white;
-            border-radius: 15px;
-            padding: 1.5rem;
-            text-align: center;
-            box-shadow: var(--shadow);
-            margin: 10px;
-            flex: 1;
-            min-width: 200px;
-            border-top: 4px solid var(--primary);
-            transition: transform 0.3s ease;
-        }
-        
-        .stat-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .stat-card h4 {
+        .feature-card h3 {
             color: var(--primary);
-            margin-bottom: 10px;
-            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
         }
         
-        .stat-card .number {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: var(--secondary);
+        .feature-card p {
+            color: var(--text-light);
+            line-height: 1.6;
         }
         
-        .quick-nav {
-            position: fixed;
-            right: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            background: white;
-            border-radius: 10px;
-            padding: 10px;
-            box-shadow: var(--shadow);
-            z-index: 100;
-            display: none;
+        .section-title {
+            text-align: center;
+            margin: 4rem 0 2rem;
+            color: var(--primary);
+            position: relative;
         }
         
-        .quick-nav a {
+        .section-title::after {
+            content: '';
             display: block;
-            padding: 8px;
-            text-align: center;
-            color: var(--dark);
-            text-decoration: none;
-            border-radius: 5px;
-            margin: 5px 0;
-            transition: all 0.3s ease;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, var(--secondary), var(--accent));
+            margin: 1rem auto;
+            border-radius: 2px;
         }
         
-        .quick-nav a:hover {
-            background: var(--secondary);
-            color: white;
+        .subject-overview {
+            margin: 3rem 0;
         }
         
-        .back-to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: var(--primary);
+        .subject-card {
+            background-color: var(--card-bg);
+            border-radius: var(--radius);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            transition: var(--transition);
+        }
+        
+        .subject-card:hover {
+            transform: translateX(10px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .subject-icon {
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
             color: white;
-            width: 50px;
-            height: 50px;
+            width: 70px;
+            height: 70px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            cursor: pointer;
+            font-size: 1.8rem;
+            flex-shrink: 0;
+        }
+        
+        .subject-content {
+            flex: 1;
+        }
+        
+        .subject-content h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .subject-content p {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+        
+        .history-section {
+            background-color: var(--card-bg);
+            border-radius: var(--radius);
+            padding: 3rem 2rem;
+            margin: 3rem 0;
             box-shadow: var(--shadow);
-            z-index: 100;
-            opacity: 0;
-            transition: opacity 0.3s ease;
         }
         
-        .back-to-top.show {
-            opacity: 1;
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 3rem auto;
         }
         
-        .search-box {
-            margin: 1.5rem 0;
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background: linear-gradient(to bottom, var(--secondary), var(--accent));
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+            border-radius: 3px;
+        }
+        
+        .timeline-item {
+            position: relative;
+            width: 50%;
+            padding: 20px 40px;
+            box-sizing: border-box;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            background-color: var(--card-bg);
+            border: 4px solid var(--secondary);
+            border-radius: 50%;
+            top: 20px;
+            right: -12px;
+            z-index: 1;
+        }
+        
+        .timeline-item:nth-child(even)::after {
+            left: -12px;
+        }
+        
+        .timeline-content {
+            padding: 1.5rem;
+            background-color: var(--light);
+            border-radius: var(--radius-sm);
+            box-shadow: var(--shadow);
             position: relative;
         }
         
-        .search-box input {
-            width: 100%;
-            padding: 12px 20px;
-            border-radius: 50px;
-            border: 1px solid #ddd;
-            font-size: 1rem;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        
-        .search-box i {
+        .timeline-content::before {
+            content: '';
             position: absolute;
-            right: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: var(--gray);
+            top: 20px;
+            right: -10px;
+            border-width: 10px 0 10px 10px;
+            border-style: solid;
+            border-color: transparent transparent transparent var(--light);
         }
         
-        .quiz-section {
-            background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%);
-            padding: 2rem;
-            border-radius: 15px;
-            margin: 2rem 0;
+        .timeline-item:nth-child(even) .timeline-content::before {
+            left: -10px;
+            right: auto;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent var(--light) transparent transparent;
         }
         
-        .quiz-question {
-            margin-bottom: 1.5rem;
+        .timeline-date {
+            font-weight: bold;
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
         }
         
-        .quiz-options {
+        .timeline-content h4 {
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+        }
+        
+        .quick-links {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin: 3rem 0;
         }
         
-        .quiz-option {
-            background: white;
-            padding: 15px;
-            border-radius: 8px;
+        .quick-link {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+            border-radius: var(--radius);
+            text-decoration: none;
+            color: white;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+        }
+        
+        .quick-link:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .quick-link i {
+            font-size: 2rem;
+            opacity: 0.9;
+        }
+        
+        .quick-link span {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        /* Loading spinner */
+        .loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 300px;
+        }
+        
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid var(--light);
+            border-top: 5px solid var(--secondary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* Search highlight */
+        .search-highlight {
+            background-color: yellow;
+            color: black;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+        
+        /* ========== EXERCISE STYLES ========== */
+        .exercise-section {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 2px solid var(--secondary);
+        }
+        
+        .exercise-question {
+            background-color: var(--light);
+            border-radius: var(--radius-sm);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: var(--shadow);
+        }
+        
+        .exercise-question p {
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+        
+        .exercise-answer {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            margin-bottom: 0.8rem;
+            background-color: var(--card-bg);
+            color: var(--text);
+        }
+        
+        .exercise-check {
+            background-color: var(--secondary);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
             cursor: pointer;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
+            transition: var(--transition);
         }
         
-        .quiz-option:hover {
-            border-color: var(--secondary);
+        .exercise-check:hover {
+            background-color: var(--primary);
         }
         
-        .quiz-option.correct {
-            border-color: var(--accent);
-            background: #e8f5e9;
+        .exercise-feedback {
+            margin-top: 0.8rem;
+            padding: 0.8rem;
+            border-radius: 4px;
+            display: none;
         }
         
-        .quiz-option.incorrect {
-            border-color: var(--primary);
-            background: #ffebee;
+        .exercise-feedback.correct {
+            background-color: rgba(46, 204, 113, 0.2);
+            border: 1px solid var(--success);
+            display: block;
         }
         
-        @media (max-width: 768px) {
-            .nav-tabs {
-                flex-direction: column;
-                border-radius: 15px;
-            }
-            
-            .tab {
-                margin: 5px 0;
-                min-width: auto;
-            }
-            
-            .alphabet-table, .comparison-table {
-                display: block;
-                overflow-x: auto;
-            }
-            
-            h1 {
-                font-size: 2.2rem;
-            }
-            
-            h2 {
-                font-size: 1.8rem;
-            }
-            
-            .tab-content {
-                padding: 1.5rem;
-            }
-            
-            .alphabet-grid {
-                grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
-            }
-            
-            .quiz-options {
+        .exercise-feedback.incorrect {
+            background-color: rgba(231, 76, 60, 0.2);
+            border: 1px solid var(--accent);
+            display: block;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 900px) {
+            .container {
                 grid-template-columns: 1fr;
             }
             
-            .quick-nav {
-                display: none !important;
+            .sidebar {
+                position: static;
+                margin-bottom: 1.5rem;
+                max-height: none;
+            }
+            
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+            
+            .timeline-item::after {
+                left: 20px;
+                right: auto;
+            }
+            
+            .timeline-item:nth-child(even)::after {
+                left: 20px;
+            }
+            
+            .timeline-content::before {
+                left: -10px;
+                right: auto;
+                border-width: 10px 10px 10px 0;
+                border-color: transparent var(--light) transparent transparent;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding-top: 50px;
+            }
+            
+            header {
+                padding: 0.8rem;
+            }
+            
+            .logo {
+                font-size: 1.5rem;
+            }
+            
+            nav {
+                top: 50px;
+            }
+            
+            .menu-toggle {
+                display: block;
+            }
+            
+            .main-menu {
+                display: none;
+            }
+            
+            .search-container {
+                width: 100%;
+                margin-top: 1rem;
+            }
+            
+            .search-container input {
+                width: 100%;
+            }
+            
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .mobile-menu-container {
+                top: 50px;
+                height: calc(100vh - 50px);
+            }
+            
+            .hero-section h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-section p {
+                font-size: 1.1rem;
+            }
+            
+            .subject-card {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .subject-icon {
+                align-self: center;
             }
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&family=Sarabun:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1><i class="fas fa-language"></i> ภาษาอังกฤษ: ตัวอักษรและกลยุทธ์เตรียมสอบ</h1>
-            <p class="subtitle">คู่มือครบถ้วนสำหรับผู้เรียนภาษาอังกฤษทุกระดับ พร้อมเทคนิคการจำและกลยุทธ์การสอบที่ได้ผล</p>
+        <div class="header-content">
+            <div class="logo">
+                <i class="fas fa-atom"></i>
+                <span>วิทยาศาสตร์ ม.ปลาย</span>
+            </div>
+            <div class="header-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="เปลี่ยนโหมดสี">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
         </div>
     </header>
     
+    <nav>
+        <div class="nav-container">
+            <button class="menu-toggle" id="menuToggle" aria-label="เปิดเมนู">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="main-menu" id="mainMenu">
+                <li><a href="#" class="active" id="homeLink"><i class="fas fa-home"></i> หน้าแรก</a></li>
+                <li><a href="#"><i class="fas fa-book"></i> เนื้อหาการเรียน</a></li>
+                <li><a href="#"><i class="fas fa-question-circle"></i> แบบฝึกหัด</a></li>
+            </ul>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="ค้นหาบทเรียน...">
+                <button id="searchButton" aria-label="ค้นหา">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-container" id="mobileMenu">
+        <ul class="mobile-menu">
+            <li><a href="#" class="active" id="mobileHomeLink"><i class="fas fa-home"></i> หน้าแรก</a></li>
+            <li><a href="#"><i class="fas fa-book"></i> เนื้อหาการเรียน</a></li>
+            <li><a href="#"><i class="fas fa-question-circle"></i> แบบฝึกหัด</a></li>
+        </ul>
+    </div>
+    <div class="overlay" id="overlay"></div>
+    
     <div class="container">
-        <div class="search-box">
-            <input type="text" placeholder="ค้นหาคำศัพท์หรือเนื้อหาที่ต้องการ...">
-            <i class="fas fa-search"></i>
-        </div>
+        <aside class="sidebar">
+            <h3><i class="fas fa-book-open"></i> วิชาวิทยาศาสตร์</h3>
+            <ul class="subject-list" id="subjectList">
+                <!-- Subjects will be loaded by JavaScript -->
+            </ul>
+            
+            <h3 style="margin-top: 2rem;"><i class="fas fa-graduation-cap"></i> ระดับชั้น</h3>
+            <ul class="subject-list">
+                <li><a href="#" data-grade="4"><i class="fas fa-1"></i> ม.4</a></li>
+                <li><a href="#" data-grade="5"><i class="fas fa-2"></i> ม.5</a></li>
+                <li><a href="#" data-grade="6"><i class="fas fa-3"></i> ม.6</a></li>
+            </ul>
+        </aside>
         
-        <div class="nav-tabs">
-            <div class="tab active" data-tab="overview"><i class="fas fa-home"></i> ภาพรวม</div>
-            <div class="tab" data-tab="alphabet"><i class="fas fa-font"></i> ตัวอักษรภาษาอังกฤษ</div>
-            <div class="tab" data-tab="exam-strategy"><i class="fas fa-graduation-cap"></i> กลยุทธ์เตรียมสอบ</div>
-            <div class="tab" data-tab="curriculum"><i class="fas fa-book"></i> หลักสูตรม.ปลาย</div>
-            <div class="tab" data-tab="resources"><i class="fas fa-link"></i> แหล่งเรียนรู้</div>
-        </div>
-        
-        <!-- หน้าแรก: ภาพรวม -->
-        <div class="tab-content active" id="overview">
-            <h2><i class="fas fa-info-circle"></i> ภาพรวมสาระสำคัญ</h2>
-            
-            <div class="highlight-box">
-                <p>เว็บไซต์นี้รวบรวมข้อมูลสำคัญเกี่ยวกับตัวอักษรภาษาอังกฤษและกลยุทธ์การเตรียมตัวสอบภาษาอังกฤษระดับมัธยมปลายอย่างครบถ้วน โดยออกแบบมาเพื่อให้เข้าใจง่ายและนำไปใช้ได้จริง</p>
+        <main class="content" id="mainContent">
+            <div class="loading" id="contentLoading" style="display: none;">
+                <div class="spinner"></div>
             </div>
-            
-            <div class="stats">
-                <div class="stat-card">
-                    <h4>ตัวอักษรภาษาอังกฤษ</h4>
-                    <div class="number">26</div>
-                    <p>ตัวอักษรทั้งหมด</p>
-                </div>
-                <div class="stat-card">
-                    <h4>สระ</h4>
-                    <div class="number">5</div>
-                    <p>A, E, I, O, U</p>
-                </div>
-                <div class="stat-card">
-                    <h4>พยัญชนะ</h4>
-                    <div class="number">21</div>
-                    <p>ตัวอักษรที่เหลือ</p>
-                </div>
-                <div class="stat-card">
-                    <h4>หน่วยเสียง</h4>
-                    <div class="number">44</div>
-                    <p>เสียงในภาษาอังกฤษ</p>
+            <div id="contentArea" style="display: none;">
+                <h2><i class="fas fa-seedling" id="contentIcon"></i> <span id="contentTitle">ชีววิทยา ม.ปลาย</span></h2>
+                <div id="contentBody">
+                    <!-- Content will be loaded by JavaScript -->
                 </div>
             </div>
             
-            <div style="display: flex; flex-wrap: wrap; gap: 25px; margin: 2.5rem 0;">
-                <div style="flex: 1; min-width: 300px; background: white; padding: 2rem; border-radius: 15px; box-shadow: var(--shadow); border-top: 4px solid var(--primary);">
-                    <h3 style="color: var(--primary);"><i class="fas fa-font"></i> ตัวอักษรภาษาอังกฤษ</h3>
-                    <ul style="margin-left: 1.5rem; margin-top: 1.5rem;">
-                        <li>ทั้งหมด 26 ตัว (น้อยกว่าภาษาไทย)</li>
-                        <li>แบ่งเป็น สระ 5 ตัว และพยัญชนะ 21 ตัว</li>
-                        <li>แยกความแตกต่างระหว่าง "ชื่อ" และ "เสียง" ของตัวอักษร</li>
-                        <li>เทคนิคการเทียบเสียงไทย-อังกฤษสำหรับการสะกดชื่อ</li>
-                        <li>อักษรกึ่งสระ W และ Y</li>
-                    </ul>
-                </div>
-                
-                <div style="flex: 1; min-width: 300px; background: white; padding: 2rem; border-radius: 15px; box-shadow: var(--shadow); border-top: 4px solid var(--secondary);">
-                    <h3 style="color: var(--secondary);"><i class="fas fa-graduation-cap"></i> กลยุทธ์เตรียมสอบ</h3>
-                    <ul style="margin-left: 1.5rem; margin-top: 1.5rem;">
-                        <li>วิเคราะห์ข้อสอบ GAT และ 9 วิชาสามัญ</li>
-                        <li>เทคนิคการจำคำศัพท์แบบ Memologic และ Memolody</li>
-                        <li>กฎไวยากรณ์สำคัญที่ออกสอบบ่อย</li>
-                        <li>เทคนิคการอ่านจับใจความอย่างมีประสิทธิภาพ</li>
-                        <li>โครงสร้างหลักสูตรภาษาอังกฤษระดับม.ปลาย</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="quiz-section">
-                <h3><i class="fas fa-question-circle"></i> แบบทดสอบความรู้เบื้องต้น</h3>
-                <div class="quiz-question">
-                    <p><strong>1. ตัวอักษรภาษาอังกฤษมีทั้งหมดกี่ตัว?</strong></p>
-                    <div class="quiz-options">
-                        <div class="quiz-option" data-correct="true">26 ตัว</div>
-                        <div class="quiz-option" data-correct="false">24 ตัว</div>
-                        <div class="quiz-option" data-correct="false">28 ตัว</div>
-                        <div class="quiz-option" data-correct="false">30 ตัว</div>
+            <!-- หน้าแรก (แสดงเมื่อเพิ่งเข้าสู่เว็บไซต์) -->
+            <div id="homepageContent">
+                <div class="hero-section">
+                    <div class="hero-content">
+                        <h1><i class="fas fa-atom"></i> วิทยาศาสตร์ ม.ปลาย</h1>
+                        <p>แหล่งเรียนรู้วิทยาศาสตร์ระดับมัธยมศึกษาตอนปลายที่ครอบคลุมทุกวิชาหลัก เนื้อหาตามหลักสูตรกระทรวงศึกษาธิการ และแบบฝึกหัดเพื่อทดสอบความเข้าใจ</p>
+                        <a href="#" class="cta-button" id="startLearningBtn">เริ่มเรียนตอนนี้ <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
-                <div class="quiz-question">
-                    <p><strong>2. ข้อสอบ 9 วิชาสามัญภาษาอังกฤษมีเวลาสอบกี่นาที?</strong></p>
-                    <div class="quiz-options">
-                        <div class="quiz-option" data-correct="false">60 นาที</div>
-                        <div class="quiz-option" data-correct="true">90 นาที</div>
-                        <div class="quiz-option" data-correct="false">120 นาที</div>
-                        <div class="quiz-option" data-correct="false">150 นาที</div>
+                
+                <h2 class="section-title">ทำไมต้องเรียนวิทยาศาสตร์?</h2>
+                <div class="feature-cards">
+                    <div class="feature-card">
+                        <i class="fas fa-brain"></i>
+                        <h3>พัฒนาทักษะการคิดวิเคราะห์</h3>
+                        <p>วิทยาศาสตร์ช่วยพัฒนากระบวนการคิดอย่างมีเหตุผล วิเคราะห์ปัญหา และหาแนวทางแก้ไขอย่างเป็นระบบ</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-search"></i>
+                        <h3>เข้าใจโลกรอบตัว</h3>
+                        <p>เรียนรู้ปรากฏการณ์ธรรมชาติและเทคโนโลยีต่างๆ ที่เกิดขึ้นในชีวิตประจำวัน</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-lightbulb"></i>
+                        <h3>สร้างนวัตกรรมใหม่</h3>
+                        <p>ความรู้ทางวิทยาศาสตร์เป็นพื้นฐานสำคัญสำหรับการสร้างนวัตกรรมและเทคโนโลยีในอนาคต</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>เตรียมความพร้อมสู่การเรียนต่อ</h3>
+                        <p>เป็นพื้นฐานสำคัญสำหรับการศึกษาต่อในสาขาวิทยาศาสตร์และเทคโนโลยีระดับอุดมศึกษา</p>
                     </div>
                 </div>
-            </div>
-            
-            <div class="tip-box">
-                <h3>เคล็ดลับสำคัญสำหรับผู้เรียน</h3>
-                <p>ปัญหาหลักของนักเรียนไทยคือการจำเฉพาะ "ชื่อ" ตัวอักษรได้ แต่ไม่รู้ "เสียง" ที่แท้จริง ซึ่งเป็นอุปสรรคต่อการอ่านคำศัพท์ใหม่ๆ การฝึกฟังและออกเสียงที่ถูกต้องจึงเป็นกุญแจสำคัญสู่ความสำเร็จ</p>
-                <div class="progress-container">
-                    <div class="progress-bar" id="learning-progress"></div>
-                </div>
-                <p><strong>เป้าหมายการเรียนรู้:</strong> ฝึกฝนอย่างน้อย 30 นาทีต่อวัน จะช่วยพัฒนาทักษะภาษาอังกฤษได้อย่างมีนัยสำคัญ</p>
-            </div>
-        </div>
-        
-        <!-- แท็บ: ตัวอักษรภาษาอังกฤษ -->
-        <div class="tab-content" id="alphabet">
-            <h2><i class="fas fa-font"></i> ตัวอักษรภาษาอังกฤษ: โครงสร้างพื้นฐานและการจำแนกประเภท</h2>
-            
-            <div class="alphabet-grid">
-                <div class="alphabet-card vowel">
-                    <div class="letter">A</div>
-                    <div class="name">เอ</div>
-                    <div class="sound">แอะ, อะ, อา</div>
-                </div>
-                <div class="alphabet-card">
-                    <div class="letter">B</div>
-                    <div class="name">บี</div>
-                    <div class="sound">เบอะ</div>
-                </div>
-                <div class="alphabet-card">
-                    <div class="letter">C</div>
-                    <div class="name">ซี</div>
-                    <div class="sound">เคอะ, สึ</div>
-                </div>
-                <div class="alphabet-card">
-                    <div class="letter">D</div>
-                    <div class="name">ดี</div>
-                    <div class="sound">เดอะ</div>
-                </div>
-                <div class="alphabet-card vowel">
-                    <div class="letter">E</div>
-                    <div class="name">อี</div>
-                    <div class="sound">เอะ, อี</div>
-                </div>
-                <div class="alphabet-card vowel">
-                    <div class="letter">I</div>
-                    <div class="name">ไอ</div>
-                    <div class="sound">อิ, ไอ</div>
-                </div>
-                <div class="alphabet-card">
-                    <div class="letter">F</div>
-                    <div class="name">เอฟ</div>
-                    <div class="sound">เฟอะ</div>
-                </div>
-                <div class="alphabet-card">
-                    <div class="letter">G</div>
-                    <div class="name">จี</div>
-                    <div class="sound">เกอะ, เจอะ</div>
-                </div>
-                <!-- สามารถเพิ่มตัวอักษรอื่นๆ ตามต้องการ -->
-            </div>
-            
-            <h3>ตารางเปรียบเทียบตัวอักษรภาษาอังกฤษ</h3>
-            <table class="alphabet-table">
-                <thead>
-                    <tr>
-                        <th>ตัวพิมพ์ใหญ่</th>
-                        <th>ตัวพิมพ์เล็ก</th>
-                        <th>ชื่อตัวอักษร</th>
-                        <th>เสียงของตัวอักษร</th>
-                        <th>เทียบเสียงอักษรไทย</th>
-                        <th>ตัวอย่างคำ</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>A</td>
-                        <td>a</td>
-                        <td>เอ</td>
-                        <td>แอะ (อะ, อา, เอ)</td>
-                        <td>สระแอ, สระเอ, อะ, อา</td>
-                        <td>Arm, Ant, Air</td>
-                    </tr>
-                    <tr>
-                        <td>B</td>
-                        <td>b</td>
-                        <td>บี</td>
-                        <td>เบอะ</td>
-                        <td>บ. ใบไม้</td>
-                        <td>Bird, Bee, Blue</td>
-                    </tr>
-                    <tr>
-                        <td>C</td>
-                        <td>c</td>
-                        <td>ซี</td>
-                        <td>เคอะ / สึ</td>
-                        <td>ค. ควาย, ซ. โซ่</td>
-                        <td>Cat, Cow, Corn</td>
-                    </tr>
-                    <tr>
-                        <td>D</td>
-                        <td>d</td>
-                        <td>ดี</td>
-                        <td>เดอะ</td>
-                        <td>ด. เด็ก</td>
-                        <td>Dog, Day, Dream</td>
-                    </tr>
-                    <tr>
-                        <td>E</td>
-                        <td>e</td>
-                        <td>อี</td>
-                        <td>เอะ (อี)</td>
-                        <td>สระเอ, สระอี</td>
-                        <td>Egg, Excellent</td>
-                    </tr>
-                    <tr>
-                        <td>F</td>
-                        <td>f</td>
-                        <td>เอฟ</td>
-                        <td>เฟอะ</td>
-                        <td>ฟ. ฟัน, ฝ. ฝา</td>
-                        <td>Farm, Fish, Fog</td>
-                    </tr>
-                    <tr>
-                        <td>G</td>
-                        <td>g</td>
-                        <td>จี</td>
-                        <td>เกอะ / เจอะ</td>
-                        <td>ก. ไก่, จ. จาน</td>
-                        <td>Giraffe, Giant</td>
-                    </tr>
-                    <tr>
-                        <td>H</td>
-                        <td>h</td>
-                        <td>เอช</td>
-                        <td>เฮอะ</td>
-                        <td>ฮ. นกฮูก, ห. หีบ</td>
-                        <td>House, Hen</td>
-                    </tr>
-                    <tr>
-                        <td>I</td>
-                        <td>i</td>
-                        <td>ไอ</td>
-                        <td>อิ (ไอ)</td>
-                        <td>สระอิ, สระไอ</td>
-                        <td>Igloo, Important</td>
-                    </tr>
-                    <tr>
-                        <td>J</td>
-                        <td>j</td>
-                        <td>เจ</td>
-                        <td>เจอะ</td>
-                        <td>จ. จาน, ย. ยักษ์</td>
-                        <td>Jar, Jeans</td>
-                    </tr>
-                    <!-- เพิ่มแถวสำหรับตัวอักษรอื่นๆ ตามข้อมูลที่ให้มา -->
-                </tbody>
-            </table>
-            
-            <h3>การจำแนกประเภทตัวอักษร</h3>
-            
-            <div style="display: flex; flex-wrap: wrap; gap: 25px; margin: 2rem 0;">
-                <div style="flex: 1; min-width: 250px; background: linear-gradient(135deg, #ffeaea 0%, #e3f2fd 100%); padding: 2rem; border-radius: 15px; box-shadow: var(--shadow);">
-                    <h4 style="color: var(--secondary);">สระ (Vowels)</h4>
-                    <p><strong>มี 5 ตัว:</strong> A, E, I, O, U</p>
-                    <p>เสียงที่เปล่งออกมาจากช่องเสียงโดยตรง โดยไม่มีการกักอากาศภายในช่องปาก</p>
-                    <p><strong>หน้าที่:</strong> เป็นแกนกลางของพยางค์</p>
+                
+                <h2 class="section-title">สาขาวิชาวิทยาศาสตร์</h2>
+                <div class="subject-overview">
+                    <div class="subject-card">
+                        <div class="subject-icon">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <div class="subject-content">
+                            <h3>ชีววิทยา</h3>
+                            <p>การศึกษาสิ่งมีชีวิตและกระบวนการทางชีวภาพ ตั้งแต่ระดับโมเลกุลจนถึงระบบนิเวศ ครอบคลุมหัวข้อเช่น เซลล์ พันธุศาสตร์ วิวัฒนาการ และนิเวศวิทยา ชีววิทยาช่วยให้เราเข้าใจการทำงานของร่างกายสิ่งมีชีวิตและความสัมพันธ์ในระบบนิเวศ</p>
+                        </div>
+                    </div>
+                    
+                    <div class="subject-card">
+                        <div class="subject-icon">
+                            <i class="fas fa-atom"></i>
+                        </div>
+                        <div class="subject-content">
+                            <h3>เคมี</h3>
+                            <p>การศึกษาสสารและการเปลี่ยนแปลงของสสาร ครอบคลุมหัวข้อเกี่ยวกับอะตอม โมเลกุล ปฏิกิริยาเคมี และคุณสมบัติของสารต่างๆ เคมีเป็นพื้นฐานสำคัญสำหรับอุตสาหกรรมหลายประเภท รวมถึงการแพทย์และเทคโนโลยีใหม่ๆ</p>
+                        </div>
+                    </div>
+                    
+                    <div class="subject-card">
+                        <div class="subject-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="subject-content">
+                            <h3>ฟิสิกส์</h3>
+                            <p>การศึกษาเกี่ยวกับธรรมชาติและปรากฏการณ์ต่างๆ ในจักรวาล ครอบคลุมหัวข้อเกี่ยวกับการเคลื่อนที่ พลังงาน ไฟฟ้า และคลื่น ฟิสิกส์ช่วยอธิบายกฎพื้นฐานของธรรมชาติที่ควบคุมทุกสิ่งในจักรวาล</p>
+                        </div>
+                    </div>
+                    
+                    <div class="subject-card">
+                        <div class="subject-icon">
+                            <i class="fas fa-globe-asia"></i>
+                        </div>
+                        <div class="subject-content">
+                            <h3>โลกและดาราศาสตร์</h3>
+                            <p>การศึกษาลักษณะของโลก สิ่งแวดล้อม และวัตถุท้องฟ้าต่างๆ ในจักรวาล ครอบคลุมหัวข้อเช่น ธรณีวิทยา อุตุนิยมวิทยา และดาราศาสตร์ ช่วยให้เราเข้าใจโลกที่เราอาศัยอยู่และตำแหน่งของเราในจักรวาล</p>
+                        </div>
+                    </div>
                 </div>
                 
-                <div style="flex: 1; min-width: 250px; background: linear-gradient(135deg, #ffeaea 0%, #e3f2fd 100%); padding: 2rem; border-radius: 15px; box-shadow: var(--shadow);">
-                    <h4 style="color: var(--primary);">พยัญชนะ (Consonants)</h4>
-                    <p><strong>มี 21 ตัว:</strong> B, C, D, F, G, H, J, K, L, M, N, P, Q, R, S, T, V, W, X, Y, Z</p>
-                    <p>เสียงที่เกิดจากการปิดกั้นการไหลของอากาศในช่องปาก</p>
-                    <p><strong>หน้าที่:</strong> ประกอบกับสระเพื่อสร้างพยางค์</p>
+                <div class="history-section">
+                    <h2 class="section-title">ที่มาและพัฒนาการของวิทยาศาสตร์</h2>
+                    <p style="text-align: center; margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto;">วิทยาศาสตร์มีพัฒนาการมาอย่างยาวนานตั้งแต่ยุคโบราณ จนถึงการปฏิวัติวิทยาศาสตร์ในศตวรรษที่ 16-17 และพัฒนาอย่างรวดเร็วในยุคปัจจุบัน</p>
+                    
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-date">ประมาณ 600 BCE - 400 CE</div>
+                            <div class="timeline-content">
+                                <h4>วิทยาศาสตร์ยุคโบราณ</h4>
+                                <p>นักปรัชญากรีกเช่นธาเลส, อริสโตเติล, และอาร์คิมิดีส เป็นผู้วางรากฐานการคิดแบบวิทยาศาสตร์ครั้งแรก โดยเน้นการสังเกตและใช้เหตุผลในการอธิบายปรากฏการณ์ธรรมชาติ</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-date">ศตวรรษที่ 8 - 14</div>
+                            <div class="timeline-content">
+                                <h4>วิทยาศาสตร์ในยุคทองของอิสลาม</h4>
+                                <p>นักวิชาการมุสลิมเช่นอัลฮาเซน, อัลควาริซมีย์ และอวิเซนนา ได้รักษาและพัฒนาความรู้ทางวิทยาศาสตร์จากกรีกโบราณ และมีส่วนสำคัญในการพัฒนาคณิตศาสตร์ ดาราศาสตร์ และการแพทย์</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-date">ศตวรรษที่ 16 - 17</div>
+                            <div class="timeline-content">
+                                <h4>การปฏิวัติวิทยาศาสตร์</h4>
+                                <p>โคเปอร์นิคัส, กาลิเลโอ, และนิวตัน ปฏิวัติความคิดทางวิทยาศาสตร์ด้วยวิธีการทางวิทยาศาสตร์แบบใหม่ ที่เน้นการทดลองและการสังเกตเป็นหลักแทนการยึดติดกับคำสอนเดิม</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-date">ศตวรรษที่ 19</div>
+                            <div class="timeline-content">
+                                <h4>ยุคแห่งการเชี่ยวชาญ</h4>
+                                <p>วิทยาศาสตร์แยกเป็นสาขาต่างๆ เช่น ฟิสิกส์ เคมี ชีววิทยา ดัลตัน, ดาร์วิน, และเมนเดล มีส่วนสำคัญในการพัฒนาวิทยาศาสตร์สมัยใหม่ด้วยทฤษฎีอะตอม วิวัฒนาการ และพันธุศาสตร์</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-date">ศตวรรษที่ 20 - ปัจจุบัน</div>
+                            <div class="timeline-content">
+                                <h4>วิทยาศาสตร์สมัยใหม่</h4>
+                                <p>เกิดทฤษฎีสำคัญเช่นสัมพัทธภาพ, กลศาสตร์ควอนตัม, และการค้นพบโครงสร้าง DNA นำไปสู่เทคโนโลยีสมัยใหม่มากมาย รวมถึงคอมพิวเตอร์ อินเทอร์เน็ต และการแพทย์สมัยใหม่</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 
-                <div style="flex: 1; min-width: 250px; background: linear-gradient(135deg, #ffeaea 0%, #e3f2fd 100%); padding: 2rem; border-radius: 15px; box-shadow: var(--shadow);">
-                    <h4 style="color: var(--secondary);">อักษรกึ่งสระ (Semivowels)</h4>
-                    <p><strong>W และ Y</strong></p>
-                    <p>ทำหน้าที่ได้ทั้งสองอย่าง ใช้สร้างเสียงควบกล้ำ (Diphthong)</p>
-                    <p><strong>ตัวอย่าง:</strong> boy, cow, yes, well</p>
+                <h2 class="section-title">เริ่มเรียนวิทยาศาสตร์ตอนนี้</h2>
+                <div class="quick-links">
+                    <a href="#" class="quick-link" data-subject="biology">
+                        <i class="fas fa-seedling"></i>
+                        <span>เริ่มเรียนชีววิทยา</span>
+                    </a>
+                    <a href="#" class="quick-link" data-subject="chemistry">
+                        <i class="fas fa-atom"></i>
+                        <span>เริ่มเรียนเคมี</span>
+                    </a>
+                    <a href="#" class="quick-link" data-subject="physics">
+                        <i class="fas fa-rocket"></i>
+                        <span>เริ่มเรียนฟิสิกส์</span>
+                    </a>
+                    <a href="#" class="quick-link" data-subject="earth-science">
+                        <i class="fas fa-globe-asia"></i>
+                        <span>เริ่มเรียนโลกดาราศาสตร์</span>
+                    </a>
                 </div>
             </div>
-            
-            <div class="highlight-box">
-                <h4>ความสำคัญของการแยก "ชื่อ" และ "เสียง" ของตัวอักษร</h4>
-                <p>ตัวอักษรแต่ละตัวมี 3 องค์ประกอบที่ต้องเข้าใจ:</p>
-                <ol>
-                    <li><strong>รูป (Form):</strong> ลักษณะที่มองเห็นของตัวอักษร (A, a, B, b)</li>
-                    <li><strong>ชื่อ (Name):</strong> ชื่อเรียกของตัวอักษร (เอ, บี, ซี)</li>
-                    <li><strong>เสียง (Sound):</strong> เสียงที่ตัวอักษรเป็นตัวแทน (แอะ, เบอะ, เคอะ)</li>
-                </ol>
-                <p>การเข้าใจเสียงเป็นกุญแจสำคัญในการอ่านคำศัพท์ภาษาอังกฤษได้อย่างถูกต้อง</p>
-            </div>
-            
-            <h3>การเทียบเสียงอักษรภาษาอังกฤษ-ไทย</h3>
-            <p>การเทียบเคียงเสียงระหว่างสองภาษาสามารถช่วยให้ผู้เรียนเข้าใจและสะกดคำได้ง่ายขึ้น โดยเฉพาะอย่างยิ่งในการเขียนชื่อหรือคำทับศัพท์</p>
-            
-            <div class="strategy-card">
-                <h4>ตัวอย่างการเขียนชื่อภาษาไทยเป็นภาษาอังกฤษ</h4>
-                <ul>
-                    <li><strong>ประพันธ์:</strong> Pra (ประ) + pan (พันธ์) → Prapan</li>
-                    <li><strong>นิวัฒน์:</strong> Ni (นิ) + wat (วัฒน์) → Niwat</li>
-                    <li><strong>สุรีย์:</strong> Su (สุ) + ree (รีย์) → Suree</li>
-                    <li><strong>สมศรี:</strong> Som (สม) + sri (ศรี) → Somsri</li>
-                    <li><strong>ทองคำ:</strong> Thong (ทอง) + kham (คำ) → Thongkham</li>
-                </ul>
-                <p><strong>หลักการสำคัญ:</strong> ภาษาอังกฤษไม่มีตัวการันต์</p>
-            </div>
-        </div>
-        
-        <!-- แท็บ: กลยุทธ์เตรียมสอบ -->
-        <div class="tab-content" id="exam-strategy">
-            <h2><i class="fas fa-graduation-cap"></i> กลยุทธ์เตรียมสอบภาษาอังกฤษระดับมัธยมปลาย</h2>
-            
-            <h3>การวิเคราะห์ข้อสอบ GAT และ 9 วิชาสามัญ</h3>
-            <table class="comparison-table">
-                <thead>
-                    <tr>
-                        <th>คุณสมบัติ</th>
-                        <th>GAT</th>
-                        <th>9 วิชาสามัญ</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>จำนวนข้อ</td>
-                        <td>60 ข้อ</td>
-                        <td>80 ข้อ</td>
-                    </tr>
-                    <tr>
-                        <td>เวลาสอบ</td>
-                        <td>1 ชั่วโมง 30 นาที</td>
-                        <td>1 ชั่วโมง 30 นาที</td>
-                    </tr>
-                    <tr>
-                        <td>เวลาเฉลี่ยต่อข้อ</td>
-                        <td>1 นาที 30 วินาที</td>
-                        <td>1 นาที 7 วินาที</td>
-                    </tr>
-                    <tr>
-                        <td>ระดับความยาก</td>
-                        <td>ง่ายกว่า</td>
-                        <td>ยากกว่า</td>
-                    </tr>
-                    <tr>
-                        <td>โครงสร้างข้อสอบ</td>
-                        <td>Conversation, Grammar, Reading, Vocabulary</td>
-                        <td>เน้น Reading เป็นหลัก</td>
-                    </tr>
-                </tbody>
-            </table>
-            
-            <h3>เทคนิคการเรียนรู้คำศัพท์ (Vocabulary)</h3>
-            
-            <div class="strategy-card">
-                <h4>Memologic (การจำศัพท์โดยใช้ความจำและตรรกะ)</h4>
-                <p>เชื่อมโยงคำศัพท์กับภาพ เสียง หรือเรื่องราวที่ใกล้ตัว</p>
-                <div class="mnemonic">
-                    <p><strong>ตัวอย่าง:</strong> คำว่า <strong>Corpulent</strong> (adj.) แปลว่า อ้วน</p>
-                    <p><strong>เทคนิคการจำ:</strong> พ้องเสียงกับภาษาไทยว่า "คอไปแล้น" (คอหายไปแล้ว) เพราะอ้วนจนไม่มีคอ</p>
-                </div>
-                <div class="mnemonic">
-                    <p><strong>ตัวอย่าง:</strong> คำว่า <strong>Indifferent</strong> (adj.) แปลว่า เฉยเมย ไม่สนใจโลก</p>
-                    <p><strong>เทคนิคการจำ:</strong> "อินดี้ friend" คือเพื่อนที่เป็นคนอินดี้ ไม่สนใจใคร</p>
-                </div>
-            </div>
-            
-            <div class="strategy-card">
-                <h4>Memolody (การจำศัพท์ผ่านบทเพลงและบทกลอน)</h4>
-                <p>นำคำศัพท์ที่มีความหมายใกล้เคียงกันมาร้อยเรียงเป็นบทกลอนหรือเพลง</p>
-                <div class="mnemonic">
-                    <p><strong>ตัวอย่างกลอนความสับสน:</strong></p>
-                    <p>"Clutter สับสนยุ่งเหยิง chaos, mess เหลือเกิน<br>
-                    disruption ไปไหน confusion, disorder กลางใจ<br>
-                    anarchy, upheaval เกินไป turbulence ไม่ไหว<br>
-                    turmoil ลำบากจัง disarray ไม่ไหว jumbo เละจัง"</p>
-                </div>
-                <div class="mnemonic">
-                    <p><strong>ตัวอย่างเพลงรักเธอที่สุด:</strong></p>
-                    <p>"Utter, absolute, entire, altogether<br>
-                    Complete, comprehensive, downright, definite<br>
-                    Total, whole, thorough ทั้งหมดทั้งสิ้น<br>
-                    จำให้ขึ้นใจคำว่า 'ที่สุด' ในภาษาอังกฤษ"</p>
-                </div>
-            </div>
-            
-            <h3>กฎไวยากรณ์สำคัญที่ออกสอบบ่อย</h3>
-            
-            <div class="strategy-card">
-                <h4>Subject-Verb Agreement (ความสอดคล้องระหว่างประธานและกริยา)</h4>
-                <p><strong>กฎส่วนขยายคือขยะ:</strong> ไม่ต้องสนใจส่วนขยายที่มาคั่นกลางระหว่างประธานและกริยา</p>
-                <p><strong>ตัวอย่าง:</strong> Tanya with her family <strong>is</strong> here. (ประธานคือ Tanya เอกพจน์)</p>
-                <p><strong>กฎเปอร์เซ็นต์:</strong> คำที่บอกปริมาณ (เช่น all, most, some, half) กริยาจะผันตามคำนามที่อยู่หลัง of</p>
-                <p><strong>ตัวอย่าง:</strong> All of the students <strong>are</strong>... (นามพหูพจน์ + กริยาพหูพจน์)</p>
-            </div>
-            
-            <div class="strategy-card">
-                <h4>Tenses (กาล)</h4>
-                <p><strong>กลอนช่วยจำเท็นส์คู่ในอดีต:</strong></p>
-                <div class="mnemonic">
-                    <p>"เหตุเกิดพร้อมกันเมื่อไหร่ ทั้งคู่ต้องใช้ Past Con อย่าลืม"</p>
-                    <p>"Past Con เกิดอยู่แบบนี้ ถ้าเกิดแทรกใหม่ต้องใช้ Past Sim"</p>
-                    <p>"เกิดก่อน Past Perfect ไง เกิดหลังต้องใช้ Past Sim แน่นอน"</p>
-                </div>
-                <p><strong>Present/Past/Future Perfect vs. Perfect Continuous:</strong></p>
-                <ul>
-                    <li><strong>Perfect:</strong> เน้นที่ ผลลัพธ์ (Result) ของการกระทำ</li>
-                    <li><strong>Perfect Continuous:</strong> เน้นที่ ช่วงเวลา (Duration) และความต่อเนื่อง</li>
-                </ul>
-            </div>
-            
-            <div class="tip-box">
-                <h4>เคล็ดลับการทำข้อสอบบทสนทนา (Conversation)</h4>
-                <p>ใช้หลัก <strong>3S</strong>:</p>
-                <ul>
-                    <li><strong>Situation</strong> (สถานการณ์): บทสนทนาเกิดขึ้นที่ไหน</li>
-                    <li><strong>Speaker</strong> (ผู้พูด): ใครคุยกับใคร</li>
-                    <li><strong>Status</strong> (ระดับภาษา): ความสัมพันธ์ของผู้พูด</li>
-                </ul>
-                <p>และเลือกคำตอบที่เป็นคนดี/สุภาพที่สุดเมื่อมีตัวเลือกที่ถูกต้องมากกว่าหนึ่งข้อ</p>
-            </div>
-            
-            <h3>เทคนิคการอ่านจับใจความ (Reading Comprehension)</h3>
-            
-            <div class="strategy-card">
-                <h4>โครงสร้างย่อหน้า (Paragraph Structure)</h4>
-                <p>ย่อหน้าทั่วไปประกอบด้วย 3 ส่วนสำคัญ:</p>
-                <ol>
-                    <li><strong>Topic Sentence:</strong> ประโยคใจความหลักของย่อหน้า (มักอยู่ประโยคแรก)</li>
-                    <li><strong>Supporting Sentences:</strong> ประโยคให้รายละเอียด ตัวอย่าง หรือเหตุผล</li>
-                    <li><strong>Concluding Sentence:</strong> ประโยคสรุปใจความสำคัญอีกครั้ง (มักอยู่ท้ายสุด)</li>
-                </ol>
-                <p><strong>คำเชื่อมที่พบบ่อย:</strong> First, Moreover, In addition, Finally, Therefore</p>
-            </div>
-        </div>
-        
-        <!-- แท็บ: หลักสูตรม.ปลาย -->
-        <div class="tab-content" id="curriculum">
-            <h2><i class="fas fa-book"></i> โครงสร้างหลักสูตรภาษาอังกฤษระดับมัธยมปลาย</h2>
-            
-            <div style="display: flex; flex-wrap: wrap; gap: 25px; margin: 2rem 0;">
-                <div style="flex: 1; min-width: 300px; background: white; padding: 2rem; border-radius: 15px; box-shadow: var(--shadow); border-top: 4px solid var(--primary);">
-                    <h3 style="color: var(--primary);">มัธยมศึกษาปีที่ 4</h3>
-                    <h4>เทอม 1</h4>
-                    <ul>
-                        <li>Present Time: Simple Present & Present Continuous</li>
-                        <li>Frequency Adverbs</li>
-                        <li>Nouns and Pronouns</li>
-                        <li>รูปพหูพจน์, Subject-Verb Agreement</li>
-                    </ul>
-                    <h4>เทอม 2</h4>
-                    <ul>
-                        <li>Past Time: Simple Past & Past Continuous</li>
-                        <li>Time Clauses, used to</li>
-                        <li>Question Words</li>
-                        <li>การสร้างคำถามด้วย Where, Why, Who, What, Which, Whose, How</li>
-                    </ul>
-                </div>
-                
-                <div style="flex: 1; min-width: 300px; background: white; padding: 2rem; border-radius: 15px; box-shadow: var(--shadow); border-top: 4px solid var(--secondary);">
-                    <h3 style="color: var(--secondary);">มัธยมศึกษาปีที่ 5</h3>
-                    <h4>เทอม 1</h4>
-                    <ul>
-                        <li>Modal Auxiliaries: Can, Could, May, Might, Should, Must, Had better</li>
-                        <li>Connecting Ideas: And, But, Or, So, Because, Although</li>
-                    </ul>
-                    <h4>เทอม 2</h4>
-                    <ul>
-                        <li>Future Time: Be going to & Will, Present Continuous for Future</li>
-                        <li>Count/Noncount Nouns & Articles: A lot of, many/much, a few/a little</li>
-                        <li>Adjective Clauses: Who, Whom, That, Which</li>
-                        <li>Gerunds and Infinitives</li>
-                        <li>The Passive Voice</li>
-                    </ul>
-                </div>
-                
-                <div style="flex: 1; min-width: 300px; background: white; padding: 2rem; border-radius: 15px; box-shadow: var(--shadow); border-top: 4px solid var(--primary);">
-                    <h3 style="color: var(--primary);">มัธยมศึกษาปีที่ 6</h3>
-                    <h4>เทอม 1</h4>
-                    <ul>
-                        <li>The Present Perfect & Past Perfect</li>
-                        <li>Simple Past vs. Present Perfect, Since/For</li>
-                        <li>Present Perfect Continuous, Past Perfect</li>
-                        <li>Noun Clauses</li>
-                        <li>การใช้ Noun Clauses กับ Question Words, If/Whether, Reported Speech</li>
-                    </ul>
-                    <h4>เทอม 2</h4>
-                    <ul>
-                        <li>Phrasal Verbs</li>
-                        <li>Preposition Combinations</li>
-                        <li>Conditional Sentences and Wishes</li>
-                        <li>Comparisons: การเปรียบเทียบขั้นกว่าและขั้นสูงสุด (as...as, more...than, the most)</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="highlight-box">
-                <h4>การวางรากฐานอย่างเป็นระบบ</h4>
-                <p>หลักสูตรภาษาอังกฤษระดับม.ปลายถูกออกแบบมาเพื่อสร้างเสริมทักษะต่างๆ อย่างเป็นลำดับขั้น จากพื้นฐานไปสู่เนื้อหาที่ซับซ้อนขึ้น ซึ่งสอดคล้องกับความต้องการของข้อสอบเข้ามหาวิทยาลัย</p>
-                <p><strong>คำแนะนำ:</strong> นักเรียนควรทบทวนเนื้อหาทั้ง 3 ปีอย่างเป็นระบบ โดยเฉพาะหัวข้อที่ออกสอบบ่อย เช่น Subject-Verb Agreement, Tenses, และ Reading Comprehension</p>
-            </div>
-        </div>
-        
-        <!-- แท็บ: แหล่งเรียนรู้เพิ่มเติม -->
-        <div class="tab-content" id="resources">
-            <h2><i class="fas fa-link"></i> แหล่งเรียนรู้เพิ่มเติม</h2>
-            
-            <div class="strategy-card">
-                <h4>เว็บไซต์ฝึกภาษาอังกฤษ</h4>
-                <ul>
-                    <li><strong>British Council LearnEnglish</strong> - แหล่งเรียนรู้ภาษาอังกฤษคุณภาพสูงจากสหราชอาณาจักร</li>
-                    <li><strong>BBC Learning English</strong> - มีเนื้อหาหลากหลายระดับ พร้อมวิดีโอและแบบฝึกหัด</li>
-                    <li><strong>Duolingo</strong> - แพลตฟอร์มการเรียนรู้ภาษาแบบเกมมิฟิเคชัน</li>
-                    <li><strong>Quizlet</strong> - สำหรับสร้างบัตรคำศัพท์และแบบทดสอบ</li>
-                    <li><strong>EnglishCentral</strong> - เรียนรู้ผ่านวิดีโอพร้อมระบบจดจำเสียง</li>
-                </ul>
-            </div>
-            
-            <div class="strategy-card">
-                <h4>แอปพลิเคชันแนะนำ</h4>
-                <ul>
-                    <li><strong>Memrise</strong> - สำหรับการจำคำศัพท์ด้วยเทคนิคการทบทวนแบบเว้นระยะ</li>
-                    <li><strong>Grammarly</strong> - ตรวจสอบไวยากรณ์ภาษาอังกฤษและแนะนำการปรับปรุง</li>
-                    <li><strong>English Listening & Speaking</strong> - ฝึกทักษะการฟังและพูด</li>
-                    <li><strong>Cake</strong> - เรียนรู้ภาษาอังกฤษผ่านคลิปวิดีโอสั้นๆ</li>
-                    <li><strong>HelloTalk</strong> - ฝึกภาษากับเจ้าของภาษาโดยตรง</li>
-                </ul>
-            </div>
-            
-            <div class="strategy-card">
-                <h4>ช่อง YouTube สอนภาษาอังกฤษสำหรับคนไทย</h4>
-                <ul>
-                    <li><strong>อาจารย์อดัม (Adam Bradshaw)</strong> - สอนภาษาอังกฤษด้วยสำเนียงอเมริกัน</li>
-                    <li><strong>KruDew - ครูเดว</strong> - เนื้อหาครอบคลุมการสอบต่างๆ</li>
-                    <li><strong>English by Chris</strong> - สอนไวยากรณ์และเทคนิคการสอบ</li>
-                    <li><strong>Angkriz</strong> - สอนภาษาอังกฤษแบบเป็นกันเอง</li>
-                    <li><strong>Unfox English</strong> - เน้นการออกเสียงและสำเนียง</li>
-                </ul>
-            </div>
-            
-            <div class="strategy-card">
-                <h4>หนังสือแนะนำ</h4>
-                <ul>
-                    <li><strong>สรุปเข้มภาษาอังกฤษ ม.ปลาย</strong> - ครอบคลุมเนื้อหาทั้ง 3 ปี</li>
-                    <li><strong>เก่ง Grammar ฉบับการ์ตูน</strong> - เรียนรู้ไวยากรณ์ผ่านการ์ตูน</li>
-                    <li><strong>ศัพท์ออกข้อสอบบ่อย 1,000 คำ</strong> - รวบรวมคำศัพท์สำคัญ</li>
-                    <li><strong>ตะลุยโจทย์ GAT English</strong> - เตรียมความพร้อมสำหรับการสอบ</li>
-                    <li><strong>English Structure & Writing</strong> - เรียนรู้โครงสร้างและการเขียน</li>
-                </ul>
-            </div>
-            
-            <div class="tip-box">
-                <h4>คำแนะนำสุดท้าย</h4>
-                <p>ความสำเร็จในการเรียนภาษาอังกฤษไม่ได้มาจากการท่องจำเพียงอย่างเดียว แต่เกิดจากการฝึกฝนอย่างสม่ำเสมอและใช้เทคนิคที่เหมาะสมกับตัวเอง ลองนำเทคนิคต่างๆ ในเว็บไซต์นี้ไปปรับใช้ และค้นหาวิธีการเรียนรู้ที่เหมาะกับคุณที่สุด</p>
-                <p><strong>จำไว้เสมอ:</strong> การเรียนภาษาเป็นกระบวนการที่ต้องใช้เวลาและความอดทน เริ่มจากพื้นฐานให้แน่น แล้วค่อยๆ พัฒนาขึ้นไปทีละขั้น</p>
-            </div>
-        </div>
-    </div>
-    
-    <div class="quick-nav">
-        <a href="#overview">ภาพรวม</a>
-        <a href="#alphabet">ตัวอักษร</a>
-        <a href="#exam-strategy">กลยุทธ์สอบ</a>
-        <a href="#curriculum">หลักสูตร</a>
-        <a href="#resources">แหล่งเรียนรู้</a>
-    </div>
-    
-    <div class="back-to-top">
-        <i class="fas fa-arrow-up"></i>
+        </main>
     </div>
     
     <footer>
-        <div class="container">
-            <p>© 2023 คู่มือภาษาอังกฤษ: ตัวอักษรและกลยุทธ์เตรียมสอบ</p>
-            <p>ข้อมูลอ้างอิงจากเอกสารสรุปสำหรับผู้บริหาร</p>
-            <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--gray);">ออกแบบและพัฒนาเพื่อส่งเสริมการเรียนรู้ภาษาอังกฤษสำหรับนักเรียนไทย</p>
+        <div class="footer-content">
+            <p>Thepbodint จัดทำโดยระดับมัธยมศึกษาปีที่ 4/4 ในหัวข้อนวัตกรรมห้องเรียน เว็บไซต์นีให้ความรู้ระดับ ม. ปลาย</p>
+            <p>แหล่งข้อมูล: เนื้อหาวิทยาศาสตร์ระดับมัธยมศึกษาตอนปลายตามหลักสูตรกระทรวงศึกษาธิการ</p>
         </div>
     </footer>
 
     <script>
-        // JavaScript สำหรับการเปลี่ยนแท็บ
-        document.addEventListener('DOMContentLoaded', function() {
-            const tabs = document.querySelectorAll('.tab');
-            const tabContents = document.querySelectorAll('.tab-content');
-            
-            tabs.forEach(tab => {
-                tab.addEventListener('click', () => {
-                    // ลบคลาส active จากแท็บและเนื้อหาทั้งหมด
-                    tabs.forEach(t => t.classList.remove('active'));
-                    tabContents.forEach(content => content.classList.remove('active'));
-                    
-                    // เพิ่มคลาส active ให้แท็บที่คลิก
-                    tab.classList.add('active');
-                    
-                    // แสดงเนื้อหาของแท็บที่คลิก
-                    const tabId = tab.getAttribute('data-tab');
-                    document.getElementById(tabId).classList.add('active');
-                });
-            });
-            
-            // แอนิเมชัน progress bar
-            const progressBar = document.getElementById('learning-progress');
-            if (progressBar) {
-                setTimeout(() => {
-                    progressBar.style.width = '75%';
-                }, 500);
+        // JSON data for subjects and content
+        const subjectsData = [
+            {
+                id: 'biology',
+                name: 'ชีววิทยา',
+                icon: 'seedling',
+                content: {
+                    title: 'ชีววิทยา ม.ปลาย',
+                    description: 'ชีววิทยาคือการศึกษาสิ่งมีชีวิตและกระบวนการทางชีวภาพต่าง ๆ ครอบคลุมหัวข้อตั้งแต่ระดับโมเลกุลจนถึงระบบนิเวศ',
+                    sections: [
+                        {
+                            title: 'ชีววิทยาของเซลล์',
+                            icon: 'dna',
+                            content: `
+                                <p>เซลล์คือหน่วยพื้นฐานของสิ่งมีชีวิตทั้งหมด โดยเซลล์แบ่งออกเป็น 2 ประเภทหลัก:</p>
+                                
+                                <div class="tabs">
+                                    <div class="tab active" data-tab="prokaryotic">เซลล์โปรคาริโอต</div>
+                                    <div class="tab" data-tab="eukaryotic">เซลล์ยูคาริโอต</div>
+                                    <div class="tab" data-tab="organelles">ออร์แกเนลล์</div>
+                                    <div class="tab" data-tab="division">การแบ่งเซลล์</div>
+                                </div>
+                                
+                                <div class="tab-content active" id="prokaryotic">
+                                    <h4>เซลล์โปรคาริโอต</h4>
+                                    <p>เซลล์โปรคาริโอตเป็นเซลล์ที่ไม่มีนิวเคลียสจริงและมีโครงสร้างที่เรียบง่ายกว่าเซลล์ยูคาริโอต</p>
+                                    <ul class="definition-list">
+                                        <li><span class="definition-term">ลักษณะสำคัญ:</span> ไม่มีเยื่อหุ้มนิวเคลียส, DNA ลอยตัวในไซโทพลาซึม, มีขนาดเล็ก (0.1-5.0 ไมโครเมตร)</li>
+                                        <li><span class="definition-term">ตัวอย่าง:</span> แบคทีเรียและสาหร่ายสีเขียวแกมน้ำเงิน</li>
+                                        <li><span class="definition-term">โครงสร้าง:</span> ผนังเซลล์, เยื่อหุ้มเซลล์, ไรโบโซม, นิวคลีโอยด์, แฟลกเจลลา</li>
+                                        <li><span class="definition-term">การแบ่งตัว:</span> แบบไบนารีฟิสชัน (Binary fission)</li>
+                                    </ul>
+                                    <div class="quiz">
+                                        <div class="quiz-question">เซลล์โปรคาริโอตมีนิวเคลียสหรือไม่?</div>
+                                        <div class="quiz-options">
+                                            <label class="quiz-option">
+                                                <input type="radio" name="quiz1" value="correct"> ไม่มีนิวเคลียส
+                                            </label>
+                                            <label class="quiz-option">
+                                                <input type="radio" name="quiz1" value="incorrect"> มีนิวเคลียส
+                                            </label>
+                                        </div>
+                                        <button class="quiz-submit">ตรวจสอบคำตอบ</button>
+                                        <div class="quiz-result"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="tab-content" id="eukaryotic">
+                                    <h4>เซลล์ยูคาริโอต</h4>
+                                    <p>เซลล์ยูคาริโอตเป็นเซลล์ที่มีนิวเคลียสจริงและมีออร์แกเนลล์ที่มีเยื่อหุ้ม</p>
+                                    <ul class="definition-list">
+                                        <li><span class="definition-term">ลักษณะสำคัญ:</span> มีเยื่อหุ้มนิวเคลียส, มีออร์แกเนลล์ต่างๆ, มีขนาดใหญ่ (10-100 ไมโครเมตร)</li>
+                                        <li><span class="definition-term">ตัวอย่าง:</span> เซลล์พืช, เซลล์สัตว์, เซลล์เชื้อรา, โพรทิสต์</li>
+                                        <li><span class="definition-term">โครงสร้าง:</span> นิวเคลียส, ไมโทคอนเดรีย, เอนโดพลาสมิกเรติคูลัม, กอลจิคอมเพล็กซ์, ไลโซโซม</li>
+                                        <li><span class="definition-term">การแบ่งตัว:</span> แบบไมโทซิสและไมโอซิส</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="tab-content" id="organelles">
+                                    <h4>ออร์แกเนลล์ในเซลล์</h4>
+                                    <p>ออร์แกเนลล์คือโครงสร้างภายในเซลล์ที่ทำหน้าที่เฉพาะอย่าง</p>
+                                    <div class="card-grid">
+                                        <div class="card">
+                                            <div class="card-header">นิวเคลียส</div>
+                                            <div class="card-body">
+                                                <p>ศูนย์ควบคุมเซลล์ เก็บข้อมูลทางพันธุกรรม (DNA)</p>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header">ไมโทคอนเดรีย</div>
+                                            <div class="card-body">
+                                                <p>แหล่งผลิตพลังงาน (ATP) ผ่านกระบวนการหายใจระดับเซลล์</p>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header">คลอโรพลาสต์</div>
+                                            <div class="card-body">
+                                                <p>พบในเซลล์พืช only ทำหน้าที่สังเคราะห์ด้วยแสง</p>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header">ไรโบโซม</div>
+                                            <div class="card-body">
+                                                <p>สร้างโปรตีนจาก mRNA</p>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header">กอลจิโบดี</div>
+                                            <div class="card-body">
+                                                <p>ปรับเปลี่ยน แพ็กและส่งโปรตีน</p>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header">เอนโดพลาสมิกเรติคูลัม</div>
+                                            <div class="card-body">
+                                                <p>เครือข่ายถุงแบนมี 2 แบบ: แบบผิวเรียบและแบบผิวขรุขระ</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="tab-content" id="division">
+                                    <h4>การแบ่งเซลล์</h4>
+                                    <p>การแบ่งเซลล์เป็นกระบวนการสำคัญสำหรับการเจริญเติบโตและการสืบพันธุ์</p>
+                                    
+                                    <h4>ไมโทซิส</h4>
+                                    <p>การแบ่งเซลล์ร่างกายเพื่อเพิ่มจำนวนเซลล์ที่เหมือนกันทุกประการ</p>
+                                    <ul class="definition-list">
+                                        <li><span class="definition-term">ระยะอินเตอร์เฟส:</span> เซลล์เตรียมพร้อมสำหรับการแบ่งตัว</li>
+                                        <li><span class="definition-term">ระยะโพรเฟส:</span> โครโมโซมควบแน่น, เยื่อหุ้มนิวเคลียสสลาย</li>
+                                        <li><span class="definition-term">ระยะเมทาเฟส:</span> โครโมโซมเรียงตัวที่เส้นศูนย์สูตรเซลล์</li>
+                                        <li><span class="definition-term">ระยะแอนาเฟส:</span> โครมาทิดแยกออกจากกัน</li>
+                                        <li><span class="definition-term">ระยะเทโลเฟส:</span> เยื่อหุ้มนิวเคลียสสร้างใหม่, เซลล์แบ่งออกเป็น 2 เซลล์</li>
+                                    </ul>
+                                    
+                                    <h4>ไมโอซิส</h4>
+                                    <p>การแบ่งเซลล์เพื่อสร้างเซลล์สืบพันธุ์ (gametes) ที่มีโครโมโซมลดลงครึ่งหนึ่ง</p>
+                                    <ul class="definition-list">
+                                        <li><span class="definition-term">ไมโอซิส I:</span> การแบ่งแบบลดจำนวนโครโมโซม</li>
+                                        <li><span class="definition-term">ไมโอซิส II:</span> การแบ่งแบบ mitosis ของเซลล์ที่ได้จากไมโอซิส I</li>
+                                        <li><span class="definition-term">ผลลัพธ์:</span> ได้ 4 เซลล์ที่มีโครโมโซม n (haploid)</li>
+                                    </ul>
+                                </div>
+                            `,
+                            subtopics: [
+                                { id: 'cell-structure', name: 'โครงสร้างเซลล์' },
+                                { id: 'cell-division', name: 'การแบ่งเซลล์' },
+                                { id: 'cell-processes', name: 'กระบวนการในเซลล์' }
+                            ]
+                        },
+                        {
+                            title: 'พันธุศาสตร์',
+                            icon: 'code-branch',
+                            content: `
+                                <p>พันธุศาสตร์คือการศึกษาเกี่ยวกับการถ่ายทอดลักษณะทางพันธุกรรมจากรุ่นหนึ่งไปอีกรุ่นหนึ่ง</p>
+                                
+                                <h4>กฎของเมนเดล</h4>
+                                <p>เกรเกอร์ เมนเดล เป็นบิดาแห่งพันธุศาสตร์ ผู้ค้นพบทฤษฎีการถ่ายทอดลักษณะทางพันธุกรรม</p>
+                                
+                                <div class="table-container">
+                                    <table>
+                                        <tr>
+                                            <th>กฎ</th>
+                                            <th>คำอธิบาย</th>
+                                            <th>ตัวอย่าง</th>
+                                        </tr>
+                                        <tr>
+                                            <td>กฎการแยกตัว</td>
+                                            <td>แอลลีลจะแยกจากกันในช่วงการสร้าง gamete</td>
+                                            <td>การผสมพันธุ์ของเมล็ดถั่วลันเตา</td>
+                                        </tr>
+                                        <tr>
+                                            <td>กฎการรวมกลุ่มอย่างอิสระ</td>
+                                            <td>ยีนสำหรับลักษณะต่างกันจะถ่ายทอดแบบอิสระต่อกัน</td>
+                                            <td>การผสมพันธุ์ของพืชที่มีหลายลักษณะ</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                
+                                <h4>โครงสร้าง DNA</h4>
+                                <p>DNA (กรดดีออกซีไรโบนิวคลีอิก) เป็นสารพันธุกรรมในสิ่งมีชีวิตส่วนใหญ่</p>
+                                <ul class="definition-list">
+                                    <li><span class="definition-term">โครงสร้าง:</span> เกลียวคู่ (Double helix) ค้นพบโดย Watson และ Crick</li>
+                                    <li><span class="definition-term">หน่วยย่อย:</span> นิวคลีโอไทด์ (ประกอบด้วย น้ำตาลดีออกซีไรโบส, หมู่ฟอสเฟต, เบสนิวคลีโอไทด์)</li>
+                                    <li><span class="definition-term">เบส:</span> Adenine (A), Thymine (T), Cytosine (C), Guanine (G)</li>
+                                    <li><span class="definition-term">การจับคู่:</span> A จับกับ T, C จับกับ G</li>
+                                </ul>
+                                
+                                <h4>การแสดงออกของยีน</h4>
+                                <p>กระบวนการถ่ายทอดข้อมูลจาก DNA ไปสู่การสร้างโปรตีน</p>
+                                <ul class="definition-list">
+                                    <li><span class="definition-term">การถอดรหัส (Transcription):</span> สร้าง mRNA จาก DNA</li>
+                                    <li><span class="definition-term">การแปลรหัส (Translation):</span> สร้างโปรตีนจาก mRNA ที่ไรโบโซม</li>
+                                    <li><span class="definition-term">รหัสพันธุกรรม:</span> เป็นรหัสสาม (codon) ที่กำหนดกรดอะมิโน</li>
+                                </ul>
+                            `,
+                            subtopics: [
+                                { id: 'mendelian', name: 'พันธุศาสตร์เมนเดเลียน' },
+                                { id: 'dna', name: 'โครงสร้างดีเอ็นเอ' },
+                                { id: 'inheritance', name: 'การถ่ายทอดทางพันธุกรรม' }
+                            ]
+                        },
+                        {
+                            title: 'ระบบนิเวศ',
+                            icon: 'leaf',
+                            content: `
+                                <p>ระบบนิเวศคือหน่วยการศึกษาที่รวมสิ่งมีชีวิตและสิ่งแวดล้อมที่อยู่รอบๆ</p>
+                                
+                                <h4>องค์ประกอบของระบบนิเวศ</h4>
+                                <div class="card-grid">
+                                    <div class="card">
+                                        <div class="card-header">องค์ประกอบ abiotic</div>
+                                        <div class="card-body">
+                                            <p>ปัจจัยทางกายภาพและเคมีที่ไม่มีชีวิต</p>
+                                            <ul>
+                                                <li>แสง</li>
+                                                <li>อุณหภูมิ</li>
+                                                <li>น้ำ</li>
+                                                <li>ดิน</li>
+                                                <li>แร่ธาตุ</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header">องค์ประกอบ biotic</div>
+                                        <div class="card-body">
+                                            <p>สิ่งมีชีวิตต่างๆ ในระบบนิเวศ</p>
+                                            <ul>
+                                                <li>ผู้ผลิต (พืช)</li>
+                                                <li>ผู้บริโภค (สัตว์)</li>
+                                                <li>ผู้ย่อยสลาย (แบคทีเรีย, เห็ดรา)</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <h4>ห่วงโซ่อาหารและสายใยอาหาร</h4>
+                                <p>แสดงการถ่ายทอดพลังงานและสารอาหารระหว่างสิ่งมีชีวิต</p>
+                                <ul class="definition-list">
+                                    <li><span class="definition-term">ผู้ผลิต:</span> สร้างอาหารเองได้ผ่านการสังเคราะห์แสง</li>
+                                    <li><span class="definition-term">ผู้บริโภค:</span> ต้องกินสิ่งมีชีวิตอื่นเป็นอาหาร</li>
+                                    <li><span class="definition-term">ผู้ย่อยสลาย:</span> ย่อยสลายซากสิ่งมีชีวิตให้เป็นแร่ธาตุ</li>
+                                </ul>
+                                
+                                <h4>การถ่ายทอดพลังงาน</h4>
+                                <p>พลังงานลดลงประมาณ 90% ในแต่ละระดับ trophic level</p>
+                                <ul class="definition-list">
+                                    <li><span class="definition-term">กฎ 10%:</span> พลังงานเพียง 10% เท่านั้นที่ถ่ายทอดไปยังระดับถัดไป</li>
+                                    <li><span class="definition-term">พีระมิดพลังงาน:</span> แสดงการลดลงของพลังงานในแต่ละระดับ</li>
+                                </ul>
+                            `,
+                            subtopics: [
+                                { id: 'ecosystem', name: 'ระบบนิเวศ' },
+                                { id: 'food-chain', name: 'ห่วงโซ่อาหาร' },
+                                { id: 'energy-flow', name: 'การถ่ายทอดพลังงาน' }
+                            ]
+                        }
+                    ],
+                    exercises: `
+                        <div class="exercise-section">
+                            <h3><i class="fas fa-pencil-alt"></i> แบบฝึกหัดทบทวนความรู้</h3>
+                            
+                            <div class="exercise">
+                                <div class="exercise-question">
+                                    <p><strong>ข้อ 1:</strong> เซลล์โปรคาริโอตแตกต่างจากเซลล์ยูคาริโอตอย่างไร?</p>
+                                    <input type="text" class="exercise-answer" data-correct="ไม่มีนิวเคลียส,ไม่มีเยื่อหุ้มนิวเคลียส,ไม่มีออร์แกเนลล์">
+                                    <button class="exercise-check">ตรวจสอบคำตอบ</button>
+                                    <div class="exercise-feedback"></div>
+                                </div>
+                                
+                                <div class="exercise-question">
+                                    <p><strong>ข้อ 2:</strong> กระบวนการใดที่พืชใช้สร้างอาหารจากแสงแดด?</p>
+                                    <input type="text" class="exercise-answer" data-correct="การสังเคราะห์ด้วยแสง,สังเคราะห์แสง">
+                                    <button class="exercise-check">ตรวจสอบคำตอบ</button>
+                                    <div class="exercise-feedback"></div>
+                                </div>
+                                
+                                <div class="exercise-question">
+                                    <p><strong>ข้อ 3:</strong> DNA ประกอบด้วยเบสใดบ้างที่จับคู่กัน?</p>
+                                    <input type="text" class="exercise-answer" data-correct="AกับT,CกับG,อะดีนีนกับไทมีน,ไซโตซีนกับกวานีน">
+                                    <button class="exercise-check">ตรวจสอบคำตอบ</button>
+                                    <div class="exercise-feedback"></div>
+                                </div>
+                                
+                                <div class="exercise-question">
+                                    <p><strong>ข้อ 4:</strong> การแบ่งเซลล์แบบใดที่ทำให้ได้เซลล์ลูกที่มีโครโมโซมลดลงครึ่งหนึ่ง?</p>
+                                    <input type="text" class="exercise-answer" data-correct="ไมโอซิส,ไมโอซิส">
+                                    <button class="exercise-check">ตรวจสอบคำตอบ</button>
+                                    <div class="exercise-feedback"></div>
+                                </div>
+                                
+                                <div class="exercise-question">
+                                    <p><strong>ข้อ 5:</strong> องค์ประกอบใดในระบบนิเวศที่ทำหน้าที่ย่อยสลายซากสิ่งมีชีวิต?</p>
+                                    <input type="text" class="exercise-answer" data-correct="ผู้ย่อยสลาย,แบคทีเรีย,เห็ดรา,จุลินทรีย์">
+                                    <button class="exercise-check">ตรวจสอบคำตอบ</button>
+                                    <div class="exercise-feedback"></div>
+                                </div>
+                            </div>
+                        </div>
+                    `
+                },
+                subtopics: [
+                    { id: 'cell-biology', name: 'ชีววิทยาของเซลล์' },
+                    { id: 'genetics', name: 'พันธุศาสตร์' },
+                    { id: 'evolution', name: 'วิวัฒนาการ' },
+                    { id: 'ecology', name: 'นิเวศวิทยา' }
+                ]
+            },
+            {
+                id: 'chemistry',
+                name: 'เคมี',
+                icon: 'atom',
+                content: {
+                    title: 'เคมี ม.ปลาย',
+                    description: 'เคมีคือการศึกษาสสารและการเปลี่ยนแปลงของสสาร ครอบคลุมหัวข้อเกี่ยวกับอะตอม โมเลกุล ปฏิกิริยาเคมี และคุณสมบัติของสารต่างๆ',
+                    sections: [
+                        {
+                            title: 'โครงสร้างอะตอม',
+                            icon: 'atom',
+                            content: `
+                                <h4>แบบจำลองอะตอม</h4>
+                                <p>แบบจำลองอะตอมได้พัฒนาขึ้นตามกาลเวลา จากแบบจำลองของดอลตันจนถึงแบบจำลองเชิงควอนตัม</p>
+                                
+                                <div class="table-container">
+                                    <table>
+                                        <tr>
+                                            <th>แบบจำลอง</th>
+                                            <th>ผู้เสนอ</th>
+                                            <th>ลักษณะสำคัญ</th>
+                                        </tr>
+                                        <tr>
+                                            <td>แบบจำลองลูกบอลบิลเลียด</td>
+                                            <td>จอห์น ดอลตัน</td>
+                                            <td>อะตอมเป็นทรงกลมตันแบ่งแยกไม่ได้</td>
+                                        </tr>
+                                        <tr>
+                                            <td>แบบจำลองพลัมพุดดิง</td>
+                                            <td>เจ. เจ. ทอมสัน</td>
+                                            <td>อะตอมมีประจุบวกและมีอิเล็กตรอนฝังอยู่</td>
+                                        </tr>
+                                        <tr>
+                                            <td>แบบจำลองนิวเคลียร์</td>
+                                            <td>เออร์เนสต์ รัทเทอร์ฟอร์ด</td>
+                                            <td>อะตอมมีนิวเคลียสอยู่กลางและอิเล็กตรอนโคจรรอบ</td>
+                                        </tr>
+                                        <tr>
+                                            <td>แบบจำลองโบร์</td>
+                                            <td>นีลส์ โบร์</td>
+                                            <td>อิเล็กตรอนโคจรเป็นระดับพลังงาน</td>
+                                        </tr>
+                                        <tr>
+                                            <td>แบบจำลองคลาวด์</td>
+                                            <td>เออร์วิน ชเรอดิงเงอร์</td>
+                                            <td>อิเล็กตรอนเป็นทั้งคลื่นและอนุภาค</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                
+                                <h4>องค์ประกอบของอะตอม</h4>
+                                <p>อะตอมประกอบด้วยอนุภาคย่อยสามชนิดหลัก:</p>
+                                <div class="card-grid">
+                                    <div class="card">
+                                        <div class="card-header">โปรตอน</div>
+                                        <div class="card-body">
+                                            <p>พบในนิวเคลียส มีประจุบวก น้ำหนัก 1 amu</p>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header">นิวตรอน</div>
+                                        <div class="card-body">
+                                            <p>พบในนิวเคลียส ไม่มีประจุ น้ำหนัก 1 amu</p>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header">อิเล็กตรอน</div>
+                                        <div class="card-body">
+                                            <p>โคจรรอบนิวเคลียส มีประจุลบ น้ำหนักน้อยมาก</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <h4>ตารางธาตุ</h4>
+                                <p>ตารางธาตุเป็นวิธีการจัดเรียงธาตุตามเลขอะตอมและคุณสมบัติที่คล้ายกัน</p>
+                                <ul class="definition-list">
+                                    <li><span class="definition-term">คาบ (Period):</span> แนวนอน มี 7 คาบ</li>
+                                    <li><span class="definition-term">หมู่ (Group):</span> แนวตั้ง มี 18 หมู่</li>
+                                    <li><span class="definition-term">โลหะ:</span> อยู่ด้านซ้ายของตารางธาตุ</li>
+                                    <li><span class="definition-term">อโลหะ:</span> อยู่ด้านขวาของตารางธาตุ</li>
+                                    <li><span class="definition-term">กึ่งโลหะ:</span> อยู่ระหว่างโลหะและอโลหะ</li>
+                                </ul>
+                            `,
+                            subtopics: [
+                                { id: 'atomic-model', name: 'แบบจำลองอะตอม' },
+                                { id: 'periodic-table', name: 'ตารางธาตุ' }
+                            ]
+                        },
+                        {
+                            title: 'ปฏิกิริยาเคมี',
+                            icon: 'vial',
+                            content: `
+                                <h4>ประเภทของปฏิกิริยาเคมี</h4>
+                                <p>ปฏิกิริยาเคมีสามารถแบ่งออกเป็นหลายประเภทตามลักษณะการเปลี่ยนแปลง</p>
+                                
+                                <div class="table-container">
+                                    <table>
+                                        <tr>
+                                            <th>ประเภท</th>
+                                            <th>ลักษณะ</th>
+                                            <th>ตัวอย่าง</th>
+                                        </tr>
+                                        <tr>
+                                            <td>การรวมตัว</td>
+                                            <td>สารตั้งต้น 2 ชนิดรวมเป็นสารผลิตภัณฑ์ 1 ชนิด</td>
+                                            <td>2H₂ + O₂ → 2H₂O</td>
+                                        </tr>
+                                        <tr>
+                                            <td>การสลายตัว</td>
+                                            <td>สารตั้งต้น 1 ชนิดสลายเป็นสารผลิตภัณฑ์ 2 ชนิดขึ้นไป</td>
+                                            <td>2H₂O₂ → 2H₂O + O₂</td>
+                                        </tr>
+                                        <tr>
+                                            <td>การแทนที่เดียว</td>
+                                            <td>ธาตุอิสระแทนที่ธาตุในสารประกอบ</td>
+                                            <td>Zn + 2HCl → ZnCl₂ + H₂</td>
+                                        </tr>
+                                        <tr>
+                                            <td>การแทนที่คู่</td>
+                                            <td>ไอออนของสารประกอบ 2 ชนิดแลกเปลี่ยนกัน</td>
+                                            <td>AgNO₃ + NaCl → AgCl + NaNO₃</td>
+                                        </tr>
+                                        <tr>
+                                            <td>การเผาไหม้</td>
+                                            <td>สารทำปฏิกิริยากับ O₂ ผลิต CO₂ และ H₂O</td>
+                                            <td>CH₄ + 2O₂ → CO₂ + 2H₂O</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                
+                                <h4>การดุลสมการเคมี</h4>
+                                <p>การดุลสมการเคมีต้องทำให้จำนวนอะตอมของแต่ละธาตุเท่ากันทั้งสองด้าน</p>
+                                <ul class="definition-list">
+                                    <li><span class="definition-term">ขั้นตอนที่ 1:</span> เขียนสมการเคมีด้วยสูตรที่ถูกต้อง</li>
+                                    <li><span class="definition-term">ขั้นตอนที่ 2:</span> นับจำนวนอะตอมของแต่ละธาตุทั้งสองด้าน</li>
+                                    <li><span class="definition-term">ขั้นตอนที่ 3:</span> ใส่สัมประสิทธิ์เพื่อดุลสมการ</li>
+                                    <li><span class="definition-term">ขั้นตอนที่ 4:</span> ตรวจสอบจำนวนอะตอมอีกครั้ง</li>
+                                </ul>
+                                
+                                <h4>อัตราการเกิดปฏิกิริยาเคมี</h4>
+                                <p>ปัจจัยที่มีผลต่ออัตราการเกิดปฏิกิริยาเคมี:</p>
+                                <div class="card-grid">
+                                    <div class="card">
+                                        <div class="card-header">ความเข้มข้น</div>
+                                        <div class="card-body">
+                                            <p>ความเข้มข้นยิ่งสูง อัตราการเกิดปฏิกิริยายิ่งเร็วขึ้น</p>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header">อุณหภูมิ</div>
+                                        <div class="card-body">
+                                            <p>อุณหภูมิยิ่งสูง อัตราการเกิดปฏิกิริยายิ่งเร็วขึ้น</p>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header">พื้นที่ผิว</div>
+                                        <div class="card-body">
+                                            <p>พื้นที่ผิวยิ่งใหญ่ขึ้น อัตราการเกิดปฏิกิริยายิ่งเร็วขึ้น</p>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header">ตัวเร่งปฏิกิริยา</div>
+                                        <div class="card-body">
+                                            <p>เพิ่มอัตราการเกิดปฏิกิริยาโดยไม่ถูกconsumed</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            `,
+                            subtopics: [
+                                { id: 'reaction-types', name: 'ประเภทปฏิกิริยา' },
+                                { id: 'balancing', name: 'การดุลสมการ' },
+                                { id: 'reaction-rate', name: 'อัตราการเกิดปฏิกิริยา' }
+                            ]
+                        }
+                    ],
+                    exercises: `
+                        <div class="exercise-section">
+                            <h3><i class="fas fa-pencil-alt"></i> แบบฝึกหัดทบทวนความรู้</h3>
+                            
+                            <div class="exercise">
+                                <div class="exercise-question">
+                                    <p><strong>ข้อ 1:</strong> อะตอมประกอบด้วยอนุภาคย่อยอะไรบ้าง?</p>
+                                    <input type="text" class="exercise-answer" data-correct="โปรตอน,นิวตรอน,อิเล็กตรอน">
+                                    <button class="exercise-check">ตรวจสอบคำตอบ</button>
+                                    <div class="exercise-feedback"></div>
+                                </div>
+                                
+                                <div class="exercise-question">
+                                    <p><strong>ข้อ 2:</strong> ปฏิกิริยาเคมีประเภทใดที่สารตั้งต้นสองชนิดรวมเป็นสารผลิตภัณฑ์หนึ่งชนิด?</p>
+                                    <input type="text" class="exercise-answer" data-correct="การรวมตัว,ปฏิกิริยารวมตัว">
+                                    <button class="exercise-check">ตรวจสอบคำตอบ</button>
+                                    <div class="exercise-feedback"></div>
+                                </div>
+                                
+                                <div class="exercise-question">
+                                    <p><strong>ข้อ 3:</strong> ธาตุใดเป็นธาตุที่มีเลขอะตอม 1 และเบาที่สุด?</p>
+                                    <input type="text" class="exercise-answer" data-correct="ไฮโดรเจน,H,ฮีเลียม">
+                                    <button class="exercise-check">ตรวจสอบคำตอบ</button>
+                                    <div class="exercise-feedback"></div>
+                                </div>
+                                
+                                <div class="exercise-question">
+                                    <p><strong>ข้อ 4:</strong> สารใดที่สามารถเพิ่มอัตราการเกิดปฏิกิริยาเคมีโดยไม่ถูกconsumed?</p>
+                                    <input type="text" class="exercise-answer" data-correct="ตัวเร่งปฏิกิริยา,ตัวเร่ง,คาตาลิสต์">
+                                    <button class="exercise-check">ตรวจสอบคำตอบ</button>
+                                    <div class="exercise-feedback"></div>
+                                </div>
+                                
+                                <div class="exercise-question">
+                                    <p><strong>ข้อ 5:</strong> กฎของโอห์มกล่าวว่าอย่างไร?</p>
+                                    <input type="text" class="exercise-answer" data-correct="V=IR,แรงดันเท่ากับกระแสคูณความต้านทาน">
+                                    <button class="exercise-check">ตรวจสอบคำตอบ</button>
+                                    <div class="exercise-feedback"></div>
+                                </div>
+                            </div>
+                        </div>
+                    `
+                },
+                subtopics: [
+                    { id: 'element', name: 'ธาตุและสารประกอบ' },
+                    { id: 'reaction', name: 'ปฏิกิริยาเคมี' },
+                    { id: 'organic', name: 'เคมีอินทรีย์' }
+                ]
+            },
+            {
+                id: 'physics',
+                name: 'ฟิสิกส์',
+                icon: 'rocket',
+                content: {
+                    title: 'ฟิสิกส์ ม.ปลาย',
+                    description: 'ฟิสิกส์คือการศึกษาเกี่ยวกับธรรมชาติและปรากฏการณ์ต่าง ๆ ในจักรวาล ครอบคลุมหัวข้อเกี่ยวกับการเคลื่อนที่ พลังงาน ไฟฟ้า และคลื่น',
+                    sections: [
+                        {
+                            title: 'กลศาสตร์',
+                            icon: 'weight-hanging',
+                            content: `
+                                <h4>การเคลื่อนที่</h4>
+                                <p>กลศาสตร์เป็นการศึกษาการเคลื่อนที่และแรงที่เกี่ยวข้อง</p>
+                                
+                                <div class="table-container">
+                                    <table>
+                                        <tr>
+                                            <th>ประเภทการเคลื่อนที่</th>
+                                            <th>คำอธิบาย</th>
+                                            <th>สมการหลัก</th>
+                                        </tr>
+                                        <tr>
+                                            <td>การเคลื่อนที่แนวตรง</td>
+                                            <td>การเคลื่อนที่ในแนวเส้นตรง</td>
+                                            <td>s = vt</td>
+                                        </tr>
+                                        <tr>
+                                            <td>การเคลื่อนที่ด้วยความเร็วคงที่</td>
+                                            <td>ความเร็วไม่เปลี่ยนแปลง</td>
+                                            <td>v = s/t</td>
+                                        </tr>
+                                        <tr>
+                                            <td>การเคลื่อนที่ด้วยความเร่งคงที่</td>
+                                            <td>ความเร็วเปลี่ยนแปลงสม่ำเสมอ</td>
+                                            <td>v = u + at</td>
+                                        </tr>
+                                        <tr>
+                                            <td>การเคลื่อนที่โปรเจคไทล์</td>
+                                            <td>การเคลื่อนที่ในสองมิติภายใต้แรงโน้มถ่วง</td>
+                                            <td>y = xtanθ - (gx²)/(2v²cos²θ)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>การเคลื่อนที่วงกลม</td>
+                                            <td>การเคลื่อนที่เป็นวงกลมด้วยความเร็วคงที่</td>
+                                            <td>a = v²/r</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                
+                                <h4>กฎการเคลื่อนที่ของนิวตัน</h4>
+                                <p>ไอแซก นิวตัน ได้เสนอกฎพื้นฐานสามข้อที่อธิบายการเคลื่อนที่</p>
+                                <div class="card-grid">
+                                    <div class="card">
+                                        <div class="card-header">กฎข้อแรก</div>
+                                        <div class="card-body">
+                                            <p>กฎของความเฉื่อย: วัตถุจะรักษาสภาพการเคลื่อนที่ไว้จนกว่าจะมีแรงลัพธ์มากระทำ</p>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header">กฎข้อที่สอง</div>
+                                        <div class="card-body">
+                                            <p>F = ma: แรงลัพธ์ที่กระทำต่อวัตถุเท่ากับมวลคูณความเร่ง</p>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header">กฎข้อที่สาม</div>
+                                        <div class="card-body">
+                                            <p>กฎของ action-reaction: ทุกแรงกระทำจะมีแรงปฏิกิริยาที่เท่ากันและทิศตรงข้าม</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <h4>งานและพลังงาน</h4>
+                                <p>งานและพลังงานเป็นแนวคิดที่เกี่ยวข้องอย่างใกล้ชิดในฟิสิกส์</p>
+                                <ul class="definition-list">
+                                    <li><span class="definition-term">งาน (Work):</span> W = F × d × cosθ (เมื่อ F คือแรง, d คือการกระจัด)</li>
+                                    <li><span class="definition-term">พลังงานจลน์:</span> KE = ½mv² (พลังงานของการเคลื่อนที่)</li>
+                                    <li><span class="definition-term">พลังงานศักย์:</span> PE = mgh (พลังงานเนื่องจากตำแหน่ง)</li>
+                                    <li><span class="definition-term">กฎการอนุรักษ์พลังงาน:</span> พลังงานรวมในระบบปิดมีค่าคงที่</li>
+                                </ul>
+                            `,
+                            subtopics: [
+                                { id: 'kinematics', name: 'จลนศาสตร์' },
+                                { id: 'dynamics', name: 'พลศาสตร์' },
+                                { id: 'energy', name: 'งานและพลังงาน' }
+                            ]
+                        },
+                        {
+                            title: 'ไฟฟ้าและแม่เหล็ก',
+                            icon: 'bolt',
+                            content: `
+                                <h4>ไฟฟ้าสถิต</h4>
+                                <p>การศึกษาเกี่ยวกับประจุไฟฟ้าที่อยู่นิ่ง</p>
+                                
+                                <div class="table-container">
+                                    <table>
+                                        <tr>
+                                            <th>กฎ</th>
+                                            <th>คำอธิบาย</th>
+                                            <th>สมการ</th>
+                                        </tr>
+                                        <tr>
+                                            <td>กฎของคูลอมบ์</td>
+                                            <td>แรงระหว่างประจุสองจุด</td>
+                                            <td>F = k(q₁q₂)/r²</td>
+                                        </tr>
+                                        <tr>
+                                            <td>สนามไฟฟ้า</td>
+                                            <td>แรงต่อหน่วยประจุ</td>
+                                            <td>E = F/q</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ศักย์ไฟฟ้า</td>
+                                            <td>งานต่อหน่วยประจุ</td>
+                                            <td>V = W/q</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ความจุ</td>
+                                            <td>ความสามารถในการเก็บประจุ</td>
+                                            <td>C = Q/V</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                
+                                <h4>ไฟฟ้ากระแส</h4>
+                                <p>การศึกษาเกี่ยวกับประจุไฟฟ้าในเคลื่อนที่</p>
+                                <ul class="definition-list">
+                                    <li><span class="definition-term">กระแสไฟฟ้า:</span> I = Q/t (อัตราการไหลของประจุ)</li>
+                                    <li><span class="definition-term">ความต่างศักย์:</span> V = W/Q (งานที่ทำต่อหน่วยประจุ)</li>
+                                    <li><span class="definition-term">ความต้านทาน:</span> R = V/I (การต้านการไหลของกระแส)</li>
+                                    <li><span class="definition-term">กฎของโอห์ม:</span> V = IR (ความสัมพันธ์ระหว่าง V, I, R)</li>
+                                </ul>
+                                
+                                <h4>แม่เหล็ก</h4>
+                                <p>การศึกษาเกี่ยวกับสนามแม่เหล็กและแรงแม่เหล็ก</p>
+                                <div class="card-grid">
+                                    <div class="card">
+                                        <div class="card-header">สนามแม่เหล็ก</div>
+                                        <div class="card-body">
+                                            <p>พื้นที่รอบแม่เหล็กที่แสดงแรงแม่เหล็ก</p>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header">แรงลอเรนซ์</div>
+                                        <div class="card-body">
+                                            <p>แรงที่กระทำต่อประจุที่เคลื่อนที่ในสนามแม่เหล็ก</p>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header">กฎของฟาราเดย์</div>
+                                        <div class="card-body">
+                                            <p>การเหนี่ยวนำแม่เหล็กไฟฟ้า</p>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header">กฎของเลนซ์</div>
+                                        <div class="card-body">
+                                            <p>ทิศทางของแรงเคลื่อนไฟฟ้าเหนี่ยวนำ</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            `,
+                            subtopics: [
+                                { id: 'electrostatics', name: 'ไฟฟ้าสถิต' },
+                                { id: 'current', name: 'ไฟฟ้ากระแส' },
+                                { id: 'magnetism', name: 'แม่เหล็ก' }
+                            ]
+                        }
+                    ],
+                    exercises: `
+                        <div class="exercise-section">
+                            <h3><i class="fas fa-pencil-alt"></i> แบบฝึกหัดทบทวนความรู้</h3>
+                            
+                            <div class="exercise">
+                                <div class="exercise-question">
+                                    <p><strong>ข้อ 1:</strong> กฎการเคลื่อนที่ข้อใดของนิวตันที่กล่าวว่า F = ma?</p>
+                                    <input type="text" class="exercise-answer" data-correct="กฎข้อสอง,ข้อสอง">
+                                    <button class="exercise-check">ตรวจสอบคำตอบ</button>
+                                    <div class="exercise-feedback"></div>
+                                </div>
+                                
+                                <div class="exercise-question">
+                                    <p><strong>ข้อ 2:</strong> พลังงานจลน์คำนวณจากสูตรใด?</p>
+                                    <input type="text" class="exercise-answer" data-correct="1/2mv²,ครึ่งหนึ่งของมวลคูณความเร็วกำลังสอง">
+                                    <button class="exercise-check">ตรวจสอบคำตอบ</button>
+                                    <div class="exercise-feedback"></div>
+                                </div>
+                                
+                                <div class="exercise-question">
+                                    <p><strong>ข้อ 3:</strong> หน่วยของกระแสไฟฟ้าคืออะไร?</p>
+                                    <input type="text" class="exercise-answer" data-correct="แอมแปร์,แอมป์,A">
+                                    <button class="exercise-check">ตรวจสอบคำตอบ</button>
+                                    <div class="exercise-feedback"></div>
+                                </div>
+                                
+                                <div class="exercise-question">
+                                    <p><strong>ข้อ 4:</strong> การเคลื่อนที่แบบใดที่วัตถุเคลื่อนที่เป็นเส้นโค้งเนื่องจากแรงโน้มถ่วง?</p>
+                                    <input type="text" class="exercise-answer" data-correct="การเคลื่อนที่โปรเจคไทล์,โปรเจคไทล์">
+                                    <button class="exercise-check">ตรวจสอบคำตอบ</button>
+                                    <div class="exercise-feedback"></div>
+                                </div>
+                                
+                                <div class="exercise-question">
+                                    <p><strong>ข้อ 5:</strong> แรงระหว่างประจุไฟฟ้าสองจุดคำนวณจากกฎใด?</p>
+                                    <input type="text" class="exercise-answer" data-correct="กฎของคูลอมบ์,คูลอมบ์">
+                                    <button class="exercise-check">ตรวจสอบคำตอบ</button>
+                                    <div class="exercise-feedback"></div>
+                                </div>
+                            </div>
+                        </div>
+                    `
+                },
+                subtopics: [
+                    { id: 'mechanics', name: 'กลศาสตร์' },
+                    { id: 'energy', name: 'พลังงาน' },
+                    { id: 'electricity', name: 'ไฟฟ้า' }
+                ]
+            },
+            {
+                id: 'earth-science',
+                name: 'โลกและดาราศาสตร์',
+                icon: 'globe-asia',
+                content: {
+                    title: 'โลกและดาราศาสตร์ ม.ปลาย',
+                    description: 'โลกและดาราศาสตร์คือการศึกษาลักษณะของโลก สิ่งแวดล้อม และวัตถุท้องฟ้าต่าง ๆ ในจักรวาล',
+                    sections: [
+                        {
+                            title: 'ธรณีวิทยา',
+                            icon: 'mountain',
+                            content: `
+                                <h4>โครงสร้างของโลก</h4>
+                                <p>โลกประกอบด้วยชั้นต่าง ๆ ที่มีลักษณะและองค์ประกอบแตกต่างกัน</p>
+                                
+                                <div class="table-container">
+                                    <table>
+                                        <tr>
+                                            <th>ชั้น</th>
+                                            <th>ความลึก</th>
+                                            <th>ลักษณะ</th>
+                                        </tr>
+                                        <tr>
+                                            <td>เปลือกโลก</td>
+                                            <td>5-70 km</td>
+                                            <td>ชั้นนอกสุด แบ่งเป็นเปลือกโลกภาคพื้นทวีปและภาคพื้นสมุทร</td>
+                                        </tr>
+                                        <tr>
+                                            <td>เนื้อโลก</td>
+                                            <td>70-2890 km</td>
+                                            <td>ชั้นกลาง แบ่งเป็นเนื้อโลกส่วนบนและส่วนล่าง</td>
+                                        </tr>
+                                        <tr>
+                                            <td>แก่นโลก</td>
+                                            <td>2890-6371 km</td>
+                                            <td>แบ่งเป็นแก่นโลกชั้นนอก (เหลว) และแก่นโลกชั้นใน (แข็ง)</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                
+                                <h4>แผ่นธรณีภาคและการเคลื่อนที่</h4>
+                                <p>ทฤษฎีแผ่นธรณีภาคอธิบายการเคลื่อนที่ของแผ่นเปลือกโลก</p>
+                                <div class="card-grid">
+                                    <div class="card">
+                                        <div class="card-header">การเคลื่อนที่แบบ divergent</div>
+                                        <div class="card-body">
+                                            <p>แผ่นธรณีภาคเคลื่อนที่ออกจากกัน</p>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header">การเคลื่อนที่แบบ convergent</div>
+                                        <div class="card-body">
+                                            <p>แผ่นธรณีภาคเคลื่อนที่เข้าหากัน</p>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header">การเคลื่อนที่แบบ transform</div>
+                                        <div class="card-body">
+                                            <p>แผ่นธรณีภาคเคลื่อนที่ผ่านกัน</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <h4>หินและวัฏจักรหิน</h4>
+                                <p>หินแบ่งออกเป็น 3 ประเภทหลักตามกระบวนการเกิด</p>
+                                <ul class="definition-list">
+                                    <li><span class="definition-term">หินอัคนี:</span> เกิดจากการเย็นตัวของแมกมา</li>
+                                    <li><span class="definition-term">หินตะกอน:</span> เกิดจากการทับถมของตะกอน</li>
+                                    <li><span class="definition-term">หินแปร:</span> เกิดจากการเปลี่ยนแปลงของหินเดิม</li>
+                                </ul>
+                            `,
+                            subtopics: [
+                                { id: 'earth-structure', name: 'โครงสร้างโลก' },
+                                { id: 'plate-tectonics', name: 'แผ่นธรณีภาค' },
+                                { id: 'rocks', name: 'หินและแร่' }
+                            ]
+                        },
+                        {
+                            title: 'ดาราศาสตร์',
+                            icon: 'star',
+                            content: `
+                                <h4>ระบบสุริยะ</h4>
+                                <p>ระบบสุริยะประกอบด้วยดวงอาทิตย์และวัตถุท้องฟ้าที่โคจรรอบ</p>
+                                
+                                <div class="table-container">
+                                    <table>
+                                        <tr>
+                                            <th>ดาวเคราะห์</th>
+                                            <th>ประเภท</th>
+                                            <th>ลักษณะเด่น</th>
+                                        </tr>
+                                        <tr>
+                                            <td>พุธ</td>
+                                            <td>ดาวเคราะห์หิน</td>
+                                            <td>ดาวเคราะห์ที่เล็กที่สุดและใกล้ดวงอาทิตย์ที่สุด</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ศุกร์</td>
+                                            <td>ดาวเคราะห์หิน</td>
+                                            <td>มีบรรยากาศหนาแน่นและร้อนที่สุด</td>
+                                        </tr>
+                                        <tr>
+                                            <td>โลก</td>
+                                            <td>ดาวเคราะห์หิน</td>
+                                            <td>มีน้ำในสถานะของเหลวและสิ่งมีชีวิต</td>
+                                        </tr>
+                                        <tr>
+                                            <td>อังคาร</td>
+                                            <td>ดาวเคราะห์หิน</td>
+                                            <td>มีสีแดงจาก iron oxide</td>
+                                        </tr>
+                                        <tr>
+                                            <td>พฤหัส</td>
+                                            <td>ดาวเคราะห์ก๊าซ</td>
+                                            <td>ใหญ่ที่สุด มีจุดแดงใหญ่</td>
+                                        </tr>
+                                        <tr>
+                                            <td>เสาร์</td>
+                                            <td>ดาวเคราะห์ก๊าซ</td>
+                                            <td>มีวงแหวนสวยงาม</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ยูเรนัส</td>
+                                            <td>ดาวเคราะห์ก๊าซ</td>
+                                            <td>หมุนรอบตัวเองในแนวเกือบตั้ง</td>
+                                        </tr>
+                                        <tr>
+                                            <td>เนปจูน</td>
+                                            <td>ดาวเคราะห์ก๊าซ</td>
+                                            <td>มีลมพายุแรงมาก</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                
+                                <h4>ดาวฤกษ์และวิวัฒนาการ</h4>
+                                <p>ดาวฤกษ์เกิด  evolve และตายตามวัฏจักรชีวิต</p>
+                                <ul class="definition-list">
+                                    <li><span class="definition-term">เนบิวลา:</span> เมฆของแก๊สและฝุ่นที่ดาวฤกษ์เกิด</li>
+                                    <li><span class="definition-term">ดาวฤกษ์ลำดับหลัก:</span> ช่วงหลักของดาวฤกษ์ (เช่นดวงอาทิตย์)</li>
+                                    <li><span class="definition-term">ยักษ์แดง:</span> ขั้นตอนเมื่อดาวฤกษ์ขยายตัว</li>
+                                    <li><span class="definition-term"> supernova:</span> การระเบิดของดาวฤกษ์มวลมาก</li>
+                                    <li><span class="definition-term">ดาวนิวตรอน/หลุมดำ:</span> ซากดาวฤกษ์หลัง supernova</li>
+                                </ul>
+                                
+                                <h4>กาแล็กซีและจักรวาล</h4>
+                                <p>กาแล็กซีคือระบบขนาดใหญ่ของดาวฤกษ์ แก๊ส และฝุ่น</p>
+                                <div class="card-grid">
+                                    <div class="card">
+                                        <div class="card-header">ทางช้างเผือก</div>
+                                        <div class="card-body">
+                                            <p>กาแล็กซีชนิดกังหันที่ระบบสุริยะของเราอยู่</p>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header">กาแล็กซีเพื่อนบ้าน</div>
+                                        <div class="card-body">
+                                            <p>เช่น กาแล็กซีแอนดรอเมดา และ เมฆแมเจลแลน</p>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header">ทฤษฎีบิกแบง</div>
+                                        <div class="card-body">
+                                            <p>ทฤษฎีการเกิดจักรวาลจากการระเบิดครั้งใหญ่</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            `,
+                            subtopics: [
+                                { id: 'solar-system', name: 'ระบบสุริยะ' },
+                                { id: 'stars', name: 'ดาวฤกษ์' },
+                                { id: 'galaxies', name: 'กาแล็กซี' }
+                            ]
+                        }
+                    ],
+                    exercises: `
+                        <div class="exercise-section">
+                            <h3><i class="fas fa-pencil-alt"></i> แบบฝึกหัดทบทวนความรู้</h3>
+                            
+                            <div class="exercise">
+                                <div class="exercise-question">
+                                    <p><strong>ข้อ 1:</strong> ชั้นนอกสุดของโลกเรียกว่าอะไร?</p>
+                                    <input type="text" class="exercise-answer" data-correct="เปลือกโลก,ครัสต์">
+                                    <button class="exercise-check">ตรวจสอบคำตอบ</button>
+                                    <div class="exercise-feedback"></div>
+                                </div>
+                                
+                                <div class="exercise-question">
+                                    <p><strong>ข้อ 2:</strong> ดาวเคราะห์ดวงใดในระบบสุริยะที่มีวงแหวนสวยงาม?</p>
+                                    <input type="text" class="exercise-answer" data-correct="เสาร์,ดาวเสาร์">
+                                    <button class="exercise-check">ตรวจสอบคำตอบ</button>
+                                    <div class="exercise-feedback"></div>
+                                </div>
+                                
+                                <div class="exercise-question">
+                                    <p><strong>ข้อ 3:</strong> ทฤษฎีที่อธิบายการเคลื่อนที่ของแผ่นเปลือกโลกเรียกว่าอะไร?</p>
+                                    <input type="text" class="exercise-answer" data-correct="ทฤษฎีแผ่นธรณีภาค,ธรณีภาค">
+                                    <button class="exercise-check">ตรวจสอบคำตอบ</button>
+                                    <div class="exercise-feedback"></div>
+                                </div>
+                                
+                                <div class="exercise-question">
+                                    <p><strong>ข้อ 4:</strong> ดาวเคราะห์ดวงใดที่อยู่ใกล้ดวงอาทิตย์ที่สุด?</p>
+                                    <input type="text" class="exercise-answer" data-correct="พุธ,ดาวพุธ">
+                                    <button class="exercise-check">ตรวจสอบคำตอบ</button>
+                                    <div class="exercise-feedback"></div>
+                                </div>
+                                
+                                <div class="exercise-question">
+                                    <p><strong>ข้อ 5:</strong> ทฤษฎีที่อธิบายการกำเนิดของจักรวาลเรียกว่าอะไร?</p>
+                                    <input type="text" class="exercise-answer" data-correct="ทฤษฎีบิกแบง,บิกแบง">
+                                    <button class="exercise-check">ตรวจสอบคำตอบ</button>
+                                    <div class="exercise-feedback"></div>
+                                </div>
+                            </div>
+                        </div>
+                    `
+                },
+                subtopics: [
+                    { id: 'geology', name: 'ธรณีวิทยา' },
+                    { id: 'astronomy', name: 'ดาราศาสตร์' },
+                    { id: 'universe', name: 'จักรวาล' }
+                ]
             }
+        ];
+
+        // DOM elements
+        const themeToggle = document.getElementById('themeToggle');
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const overlay = document.getElementById('overlay');
+        const subjectList = document.getElementById('subjectList');
+        const searchInput = document.getElementById('searchInput');
+        const searchButton = document.getElementById('searchButton');
+        const contentLoading = document.getElementById('contentLoading');
+        const contentArea = document.getElementById('contentArea');
+        const contentTitle = document.getElementById('contentTitle');
+        const contentIcon = document.getElementById('contentIcon');
+        const contentBody = document.getElementById('contentBody');
+        const homepageContent = document.getElementById('homepageContent');
+        const homeLink = document.getElementById('homeLink');
+        const mobileHomeLink = document.getElementById('mobileHomeLink');
+        const startLearningBtn = document.getElementById('startLearningBtn');
+
+        // State management
+        let currentSubject = 'biology';
+        let currentSubtopic = null;
+        let currentGrade = 4;
+        let openAccordion = null;
+        let isHomepage = true;
+
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load subjects from JSON data
+            loadSubjects();
             
-            // เพิ่มเอฟเฟกต์เมื่อเลื่อนดูเนื้อหา
-            const observerOptions = {
-                root: null,
-                rootMargin: '0px',
-                threshold: 0.1
-            };
+            // Set up event listeners
+            setupEventListeners();
             
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = 1;
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            }, observerOptions);
+            // Check for saved preferences
+            loadPreferences();
             
-            // กำหนดให้องค์ประกอบที่มีเอฟเฟกต์ fade-in
-            const fadeElements = document.querySelectorAll('.strategy-card, .highlight-box, .tip-box');
-            fadeElements.forEach(el => {
-                el.style.opacity = 0;
-                el.style.transform = 'translateY(20px)';
-                el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-                observer.observe(el);
+            // Show homepage by default
+            showHomepage();
+        });
+
+        // Function to show homepage
+        function showHomepage() {
+            contentLoading.style.display = 'none';
+            contentArea.style.display = 'none';
+            homepageContent.style.display = 'block';
+            isHomepage = true;
+            
+            // Update active states in navigation
+            document.querySelectorAll('.main-menu a, .mobile-menu a').forEach(link => {
+                link.classList.remove('active');
+            });
+            homeLink.classList.add('active');
+            mobileHomeLink.classList.add('active');
+        }
+
+        // Function to hide homepage and show subject content
+        function hideHomepage() {
+            homepageContent.style.display = 'none';
+            isHomepage = false;
+        }
+
+        // Function to load subjects into the sidebar
+        function loadSubjects() {
+            let html = '';
+            
+            subjectsData.forEach(subject => {
+                const hasSubtopics = subject.subtopics && subject.subtopics.length > 0;
+                
+                html += `
+                    <li>
+                        <a href="#" class="subject-link ${hasSubtopics ? 'has-subtopics' : ''} ${subject.id === currentSubject ? 'active' : ''}" 
+                           data-subject="${subject.id}">
+                            <i class="fas fa-${subject.icon}"></i> ${subject.name}
+                            ${hasSubtopics ? '<span></span>' : ''}
+                        </a>
+                        ${hasSubtopics ? `
+                            <div class="accordion" id="accordion-${subject.id}">
+                                ${subject.subtopics.map(subtopic => `
+                                    <a href="#" class="subtopic-link ${currentSubtopic === subtopic.id ? 'active' : ''}" 
+                                       data-subject="${subject.id}" data-topic="${subtopic.id}">
+                                        ${subtopic.name}
+                                    </a>
+                                `).join('')}
+                            </div>
+                        ` : ''}
+                    </li>
+                `;
             });
             
-            // ฟังก์ชันสำหรับแบบทดสอบ
-            const quizOptions = document.querySelectorAll('.quiz-option');
-            quizOptions.forEach(option => {
-                option.addEventListener('click', function() {
-                    const isCorrect = this.getAttribute('data-correct') === 'true';
+            subjectList.innerHTML = html;
+        }
+
+        // Set up all event listeners
+        function setupEventListeners() {
+            // Theme toggle
+            themeToggle.addEventListener('click', toggleTheme);
+            
+            // Mobile menu toggle
+            menuToggle.addEventListener('click', toggleMobileMenu);
+            overlay.addEventListener('click', toggleMobileMenu);
+            
+            // Home link
+            homeLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                showHomepage();
+            });
+            
+            mobileHomeLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                showHomepage();
+                toggleMobileMenu();
+            });
+            
+            // Start learning button
+            startLearningBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                loadContent('biology');
+            });
+            
+            // Quick links on homepage
+            document.querySelectorAll('.quick-link').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const subjectId = this.getAttribute('data-subject');
+                    loadContent(subjectId);
+                });
+            });
+            
+            // Subject links
+            document.addEventListener('click', function(e) {
+                // Subject links
+                if (e.target.classList.contains('subject-link') || e.target.closest('.subject-link')) {
+                    e.preventDefault();
+                    const subjectLink = e.target.classList.contains('subject-link') ? e.target : e.target.closest('.subject-link');
+                    const subjectId = subjectLink.getAttribute('data-subject');
                     
-                    // ลบคลาสทั้งหมดก่อนเพิ่มใหม่
-                    quizOptions.forEach(opt => {
-                        opt.classList.remove('correct', 'incorrect');
+                    // Close previously opened accordion if clicking a different subject
+                    if (openAccordion && openAccordion !== subjectId) {
+                        const prevAccordion = document.getElementById(`accordion-${openAccordion}`);
+                        const prevLink = document.querySelector(`.subject-link[data-subject="${openAccordion}"]`);
+                        if (prevAccordion) prevAccordion.classList.remove('show');
+                        if (prevLink) prevLink.classList.remove('open');
+                    }
+                    
+                    // Toggle accordion if it has subtopics
+                    if (subjectLink.classList.contains('has-subtopics')) {
+                        subjectLink.classList.toggle('open');
+                        const accordion = document.getElementById(`accordion-${subjectId}`);
+                        accordion.classList.toggle('show');
+                        openAccordion = accordion.classList.contains('show') ? subjectId : null;
+                    }
+                    
+                    // Load content
+                    loadContent(subjectId);
+                }
+                
+                // Subtopic links
+                if (e.target.classList.contains('subtopic-link')) {
+                    e.preventDefault();
+                    const subjectId = e.target.getAttribute('data-subject');
+                    const topicId = e.target.getAttribute('data-topic');
+                    
+                    // Update active states
+                    document.querySelectorAll('.subtopic-link').forEach(link => {
+                        link.classList.remove('active');
+                    });
+                    e.target.classList.add('active');
+                    
+                    currentSubtopic = topicId;
+                    loadContent(subjectId, topicId);
+                }
+                
+                // Grade links
+                if (e.target.hasAttribute('data-grade')) {
+                    e.preventDefault();
+                    currentGrade = parseInt(e.target.getAttribute('data-grade'));
+                    
+                    // Update active states
+                    document.querySelectorAll('[data-grade]').forEach(link => {
+                        link.classList.remove('active');
+                    });
+                    e.target.classList.add('active');
+                    
+                    // Reload content with new grade filter
+                    if (!isHomepage) {
+                        loadContent(currentSubject, currentSubtopic);
+                    }
+                }
+                
+                // Tab functionality
+                if (e.target.classList.contains('tab')) {
+                    const tabId = e.target.getAttribute('data-tab');
+                    const tabContainer = e.target.closest('.tabs');
+                    
+                    // Remove active class from all tabs in this container
+                    tabContainer.querySelectorAll('.tab').forEach(t => {
+                        t.classList.remove('active');
                     });
                     
-                    // เพิ่มคลาสตามคำตอบ
-                    if (isCorrect) {
-                        this.classList.add('correct');
+                    // Add active class to clicked tab
+                    e.target.classList.add('active');
+                    
+                    // Hide all tab contents in this container
+                    tabContainer.parentElement.querySelectorAll('.tab-content').forEach(tc => {
+                        tc.classList.remove('active');
+                    });
+                    
+                    // Show the corresponding tab content
+                    document.getElementById(tabId).classList.add('active');
+                }
+                
+                // Quiz functionality
+                if (e.target.classList.contains('quiz-submit')) {
+                    const quiz = e.target.parentElement;
+                    const selectedOption = quiz.querySelector('input[type="radio"]:checked');
+                    const result = quiz.querySelector('.quiz-result');
+                    
+                    if (!selectedOption) {
+                        result.textContent = 'กรุณาเลือกคำตอบ';
+                        result.className = 'quiz-result incorrect';
+                        return;
+                    }
+                    
+                    if (selectedOption.value === 'correct') {
+                        result.textContent = 'ถูกต้อง! ✓ คำตอบของคุณถูกต้อง';
+                        result.className = 'quiz-result correct';
                     } else {
-                        this.classList.add('incorrect');
-                        
-                        // แสดงคำตอบที่ถูกต้อง
-                        const parent = this.parentElement;
-                        const correctOption = parent.querySelector('[data-correct="true"]');
-                        if (correctOption) {
-                            correctOption.classList.add('correct');
+                        result.textContent = 'ไม่ถูกต้อง โปรดลองอีกครั้ง';
+                        result.className = 'quiz-result incorrect';
+                    }
+                }
+                
+                // Exercise functionality
+                if (e.target.classList.contains('exercise-check')) {
+                    const question = e.target.parentElement;
+                    const answerInput = question.querySelector('.exercise-answer');
+                    const feedback = question.querySelector('.exercise-feedback');
+                    const userAnswer = answerInput.value.trim().toLowerCase();
+                    const correctAnswers = answerInput.getAttribute('data-correct').toLowerCase().split(',');
+                    
+                    if (userAnswer === '') {
+                        feedback.textContent = 'กรุณากรอกคำตอบ';
+                        feedback.className = 'exercise-feedback incorrect';
+                        return;
+                    }
+                    
+                    // ตรวจสอบคำตอบแบบยืดหยุ่น
+                    let isCorrect = false;
+                    for (let correctAnswer of correctAnswers) {
+                        // ตรวจสอบว่าคำตอบของผู้ใช้มีคำที่ถูกต้องหรือไม่
+                        if (userAnswer.includes(correctAnswer.trim()) || 
+                            correctAnswer.trim().includes(userAnswer) ||
+                            calculateSimilarity(userAnswer, correctAnswer.trim()) > 0.7) {
+                            isCorrect = true;
+                            break;
                         }
                     }
-                });
-            });
-            
-            // ฟังก์ชันสำหรับปุ่มกลับไปด้านบน
-            const backToTop = document.querySelector('.back-to-top');
-            window.addEventListener('scroll', function() {
-                if (window.pageYOffset > 300) {
-                    backToTop.classList.add('show');
-                } else {
-                    backToTop.classList.remove('show');
+                    
+                    if (isCorrect) {
+                        feedback.textContent = 'ถูกต้อง! ✓ คำตอบของคุณถูกต้อง';
+                        feedback.className = 'exercise-feedback correct';
+                    } else {
+                        feedback.textContent = 'ไม่ถูกต้อง โปรดลองอีกครั้ง';
+                        feedback.className = 'exercise-feedback incorrect';
+                    }
                 }
             });
             
-            backToTop.addEventListener('click', function() {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            });
-            
-            // ฟังก์ชันสำหรับเมนูนำทางเร็ว
-            const quickNav = document.querySelector('.quick-nav');
-            window.addEventListener('scroll', function() {
-                if (window.pageYOffset > 500 && window.innerWidth > 768) {
-                    quickNav.style.display = 'block';
-                } else {
-                    quickNav.style.display = 'none';
+            // Search functionality
+            searchButton.addEventListener('click', performSearch);
+            searchInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    performSearch();
                 }
             });
+        }
+
+        // Load content based on subject and optional subtopic
+        function loadContent(subjectId, subtopicId = null) {
+            // Hide homepage and show loading
+            hideHomepage();
+            contentLoading.style.display = 'flex';
+            contentArea.style.display = 'none';
             
-            // การค้นหา
-            const searchInput = document.querySelector('.search-box input');
-            searchInput.addEventListener('input', function() {
-                const searchTerm = this.value.toLowerCase();
-                if (searchTerm.length > 2) {
-                    // ในเว็บจริงจะมีการค้นหาจริงๆ ที่นี่เป็นเพียงตัวอย่าง
-                    console.log('กำลังค้นหา:', searchTerm);
+            // Simulate loading delay
+            setTimeout(() => {
+                try {
+                    const subject = subjectsData.find(s => s.id === subjectId);
+                    if (!subject) return;
+                    
+                    // Update active states
+                    document.querySelectorAll('.subject-link').forEach(link => {
+                        link.classList.remove('active');
+                    });
+                    const activeSubjectLink = document.querySelector(`.subject-link[data-subject="${subjectId}"]`);
+                    if (activeSubjectLink) {
+                        activeSubjectLink.classList.add('active');
+                    }
+                    
+                    currentSubject = subjectId;
+                    currentSubtopic = subtopicId;
+                    
+                    // Update content
+                    contentTitle.textContent = `${subject.content.title} (ม.${currentGrade})`;
+                    contentIcon.className = `fas fa-${subject.icon}`;
+                    
+                    let contentHTML = `<p>${subject.content.description}</p>`;
+                    
+                    // Add sections
+                    subject.content.sections.forEach(section => {
+                        contentHTML += `
+                            <div class="content-section">
+                                <h3><i class="fas fa-${section.icon}"></i> ${section.title}</h3>
+                                ${section.content}
+                            </div>
+                        `;
+                    });
+                    
+                    // Add exercises
+                    if (subject.content.exercises) {
+                        contentHTML += subject.content.exercises;
+                    }
+                    
+                    contentBody.innerHTML = contentHTML;
+                    
+                    // Hide loading indicator, show content
+                    contentLoading.style.display = 'none';
+                    contentArea.style.display = 'block';
+                    
+                    // Save to localStorage
+                    savePreferences();
+                } catch (error) {
+                    console.error('Error loading content:', error);
+                    contentLoading.style.display = 'none';
+                    contentBody.innerHTML = '<p>เกิดข้อผิดพลาดในการโหลดเนื้อหา</p>';
+                    contentArea.style.display = 'block';
                 }
-            });
-        });
+            }, 500);
+        }
+
+        // Toggle mobile menu
+        function toggleMobileMenu() {
+            mobileMenu.classList.toggle('open');
+            overlay.classList.toggle('open');
+            document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+        }
+
+        // Toggle between light and dark mode
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+            const icon = themeToggle.querySelector('i');
+            
+            if (document.body.classList.contains('dark-mode')) {
+                icon.className = 'fas fa-sun';
+            } else {
+                icon.className = 'fas fa-moon';
+            }
+            
+            savePreferences();
+        }
+
+        // Perform search
+        function performSearch() {
+            const query = searchInput.value.trim().toLowerCase();
+            
+            if (query === '') {
+                alert('กรุณากรอกคำค้นหา');
+                return;
+            }
+            
+            // If on homepage, switch to content view first
+            if (isHomepage) {
+                loadContent('biology');
+                // Wait for content to load
+                setTimeout(() => {
+                    highlightSearchTerms(query);
+                }, 600);
+            } else {
+                highlightSearchTerms(query);
+            }
+        }
+        
+        // Helper function to highlight search terms
+        function highlightSearchTerms(query) {
+            const contentText = contentBody.textContent;
+            if (contentText.toLowerCase().includes(query)) {
+                const regex = new RegExp(query, 'gi');
+                const highlightedContent = contentBody.innerHTML.replace(
+                    regex, 
+                    match => `<span class="search-highlight">${match}</span>`
+                );
+                contentBody.innerHTML = highlightedContent;
+                
+                // Scroll to first highlight
+                const firstHighlight = contentBody.querySelector('.search-highlight');
+                if (firstHighlight) {
+                    firstHighlight.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            } else {
+                alert(`ไม่พบผลลัพธ์สำหรับ "${query}"`);
+            }
+        }
+
+        // ฟังก์ชันคำนวณความคล้ายคลึงระหว่างคำตอบ (Levenshtein distance)
+        function calculateSimilarity(str1, str2) {
+            const track = Array(str2.length + 1).fill(null).map(() =>
+                Array(str1.length + 1).fill(null));
+            for (let i = 0; i <= str1.length; i += 1) {
+                track[0][i] = i;
+            }
+            for (let j = 0; j <= str2.length; j += 1) {
+                track[j][0] = j;
+            }
+            for (let j = 1; j <= str2.length; j += 1) {
+                for (let i = 1; i <= str1.length; i += 1) {
+                    const indicator = str1[i - 1] === str2[j - 1] ? 0 : 1;
+                    track[j][i] = Math.min(
+                        track[j][i - 1] + 1, // deletion
+                        track[j - 1][i] + 1, // insertion
+                        track[j - 1][i - 1] + indicator, // substitution
+                    );
+                }
+            }
+            const distance = track[str2.length][str1.length];
+            const maxLength = Math.max(str1.length, str2.length);
+            return maxLength === 0 ? 1.0 : (maxLength - distance) / maxLength;
+        }
+
+        // Save user preferences to localStorage
+        function savePreferences() {
+            const preferences = {
+                theme: document.body.classList.contains('dark-mode') ? 'dark' : 'light',
+                subject: currentSubject,
+                subtopic: currentSubtopic,
+                grade: currentGrade
+            };
+            localStorage.setItem('scienceAppPreferences', JSON.stringify(preferences));
+        }
+
+        // Load user preferences from localStorage
+        function loadPreferences() {
+            const preferences = JSON.parse(localStorage.getItem('scienceAppPreferences'));
+            if (preferences) {
+                // Set theme
+                if (preferences.theme === 'dark') {
+                    document.body.classList.add('dark-mode');
+                    themeToggle.querySelector('i').className = 'fas fa-sun';
+                }
+                
+                // Set subject and subtopic
+                if (preferences.subject) {
+                    currentSubject = preferences.subject;
+                    currentSubtopic = preferences.subtopic;
+                    currentGrade = preferences.grade || 4;
+                    
+                    // Update grade active state
+                    document.querySelectorAll('[data-grade]').forEach(link => {
+                        link.classList.remove('active');
+                    });
+                    const gradeLink = document.querySelector(`[data-grade="${currentGrade}"]`);
+                    if (gradeLink) {
+                        gradeLink.classList.add('active');
+                    }
+                    
+                    // Reload content if not on homepage
+                    if (!isHomepage) {
+                        loadContent(currentSubject, currentSubtopic);
+                    }
+                }
+            }
+        }
     </script>
 </body>
 </html>
